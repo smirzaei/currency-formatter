@@ -4,6 +4,11 @@
 
 A simple Javascript utility that helps you to display currency properly
 
+Install
+=
+
+`npm install currency-formatter --save`
+
 Basic Usage
 =
 

@@ -128,7 +128,17 @@ describe("format", () => {
         format: '%v %s'
       });
 
-      assert.equal("1^000^000*000 ¯\\_(ツ)_/¯", result)
+      assert.equal(result, "1^000^000*000 ¯\\_(ツ)_/¯")
+    })
+  })
+
+  context("When the currency is not found", () => {
+    it("Uses default values", () => {
+      var result = formatCurrency.format(1000000, {
+        code: 'None existing currency'
+      });
+
+      assert.equal(result, "1,000,000.00");
     })
   })
 })

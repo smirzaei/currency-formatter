@@ -2,11 +2,18 @@ var data = require('./data');
 var accounting = require('accounting');
 
 var FormatCurrency = function() {
-
+  this.defaultCurrency = {
+    symbol: '',
+    thousandsSeparator: ',',
+    decimalSeparator: '.',
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: false,
+    decimalDigits: 2
+  }
 }
 
 FormatCurrency.prototype.format = function (value, options) {
-  var currency = data.find(c => c.code === options.code);
+  var currency = data.find(c => c.code === options.code) || this.defaultCurrency;
 
   var symbolOnLeft = currency.symbolOnLeft;
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;

@@ -1,5 +1,5 @@
 {
-  "name": "format-currency",
+  "name": "currency-formatter",
   "version": "0.0.1",
   "description": "A simple Javascript utility that helps you to display currency properly",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smirzaei/format-currency.git"
+    "url": "git+https://github.com/smirzaei/currency-formatter.git"
   },
   "keywords": [
     "format",
@@ -18,9 +18,9 @@
   "author": "Soroush Mirzaei <soroush.mirzaei@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/smirzaei/format-currency/issues"
+    "url": "https://github.com/smirzaei/currency-formatter/issues"
   },
-  "homepage": "https://github.com/smirzaei/format-currency#readme",
+  "homepage": "https://github.com/smirzaei/currency-formatter#readme",
   "devDependencies": {
     "chai": "^3.3.0",
     "mocha": "^2.3.3"

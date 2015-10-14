@@ -1,7 +1,7 @@
 var data = require('./data');
 var accounting = require('accounting');
 
-var FormatCurrency = function() {
+var CurrencyFormatter = function() {
   this.defaultCurrency = {
     symbol: '',
     thousandsSeparator: ',',
@@ -12,7 +12,7 @@ var FormatCurrency = function() {
   }
 }
 
-FormatCurrency.prototype.format = function (value, options) {
+CurrencyFormatter.prototype.format = function (value, options) {
   var currency = data.find(c => c.code === options.code) || this.defaultCurrency;
 
   var symbolOnLeft = currency.symbolOnLeft;
@@ -38,4 +38,4 @@ FormatCurrency.prototype.format = function (value, options) {
   })
 }
 
-module.exports = new FormatCurrency();
+module.exports = new CurrencyFormatter();

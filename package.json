@@ -4,7 +4,7 @@
   "description": "A simple Javascript utility that helps you to display currency properly",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "NODE_ENV=test mocha ./test.js --harmony"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,12 @@
   "bugs": {
     "url": "https://github.com/smirzaei/format-currency/issues"
   },
-  "homepage": "https://github.com/smirzaei/format-currency#readme"
+  "homepage": "https://github.com/smirzaei/format-currency#readme",
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "mocha": "^2.3.3"
+  },
+  "dependencies": {
+    "accounting": "^0.4.1"
+  }
 }

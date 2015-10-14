@@ -116,4 +116,19 @@ describe("format", () => {
       })
     })
   })
+
+  context("Overriding Options", () => {
+    it("Returns 1^000^000*000 ¯\\_(ツ)_/¯ for the given parameters", () => {
+      var result = formatCurrency.format(1000000, {
+        code: 'USD',
+        symbol: '¯\\_(ツ)_/¯',
+        decimal: '*',
+        thousand: '^',
+        precision: 3,
+        format: '%v %s'
+      });
+
+      assert.equal("1^000^000*000 ¯\\_(ツ)_/¯", result)
+    })
+  })
 })

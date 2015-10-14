@@ -23,11 +23,11 @@ FormatCurrency.prototype.format = function (value, options) {
   }
 
   return accounting.formatMoney(value, {
-    symbol: currency.symbol,
-    decimal: currency.decimalSeparator,
-		thousand: currency.thousandsSeparator,
-		precision: currency.decimalDigits,
-    format: format
+    symbol: options.symbol || currency.symbol,
+    decimal: options.decimal || currency.decimalSeparator,
+		thousand: options.thousand || currency.thousandsSeparator,
+		precision: options.precision || currency.decimalDigits,
+    format: options.format || format
   })
 }
 

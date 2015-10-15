@@ -38,4 +38,8 @@ CurrencyFormatter.prototype.format = function (value, options) {
   })
 }
 
+CurrencyFormatter.prototype.findCurrency = function (currencyCode) {
+  return data.find(c => c.code === currencyCode);
+}
+
 module.exports = new CurrencyFormatter();

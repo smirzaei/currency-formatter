@@ -142,3 +142,42 @@ describe("format", () => {
     })
   })
 })
+
+describe("findCurrency", () => {
+  it("returns the expected currency for USD", () => {
+    var expected = {
+      code: 'USD',
+      symbol: '$',
+      thousandsSeparator: ',',
+      decimalSeparator: '.',
+      symbolOnLeft: true,
+      spaceBetweenAmountAndSymbol: false,
+      decimalDigits: 2
+    };
+
+    var result = currencyFormatter.findCurrency("USD");
+
+    assert.deepEqual(result, expected);
+  })
+
+  it("returns the expected currency for EUR", () => {
+    var expected = {
+      code: 'EUR',
+      symbol: '€',
+      thousandsSeparator: ' ',
+      decimalSeparator: ',',
+      symbolOnLeft: false,
+      spaceBetweenAmountAndSymbol: true,
+      decimalDigits: 2
+    };
+
+    var result = currencyFormatter.findCurrency("EUR");
+
+    assert.deepEqual(result, expected);
+  })
+
+  it("returns undefined when it can't find the currency", () => {
+    var result = currencyFormatter.findCurrency("NON EXISTING");
+    assert.isUndefined(result);
+  })
+})

@@ -13,7 +13,7 @@ var CurrencyFormatter = function() {
 }
 
 CurrencyFormatter.prototype.format = function (value, options) {
-  var currency = data.find(c => c.code === options.code) || this.defaultCurrency;
+  var currency = data.find(function(c) { return c.code === options.code; }) || this.defaultCurrency;
 
   var symbolOnLeft = currency.symbolOnLeft;
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
@@ -39,7 +39,7 @@ CurrencyFormatter.prototype.format = function (value, options) {
 }
 
 CurrencyFormatter.prototype.findCurrency = function (currencyCode) {
-  return data.find(c => c.code === currencyCode);
+  return data.find(function(c) { return c.code === currencyCode; });
 }
 
 module.exports = new CurrencyFormatter();

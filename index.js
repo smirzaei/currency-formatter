@@ -1,19 +1,20 @@
-var data = require('./data');
+var currencies = require('./currencies');
 var accounting = require('accounting');
+var find = require('lodash.find');
 
-var CurrencyFormatter = function() {
-  this.defaultCurrency = {
-    symbol: '',
-    thousandsSeparator: ',',
-    decimalSeparator: '.',
-    symbolOnLeft: true,
-    spaceBetweenAmountAndSymbol: false,
-    decimalDigits: 2
-  }
+exports.defaultCurrency = {
+  symbol: '',
+  thousandsSeparator: ',',
+  decimalSeparator: '.',
+  symbolOnLeft: true,
+  spaceBetweenAmountAndSymbol: false,
+  decimalDigits: 2
 }
 
-CurrencyFormatter.prototype.format = function (value, options) {
-  var currency = data.find(function(c) { return c.code === options.code; }) || this.defaultCurrency;
+exports.currencies = currencies;
+
+exports.format = function (value, options) {
+  var currency = find(currencies, function(c) { return c.code === options.code; }) || exports.defaultCurrency;
 
   var symbolOnLeft = currency.symbolOnLeft;
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
@@ -38,8 +39,6 @@ CurrencyFormatter.prototype.format = function (value, options) {
   })
 }
 
-CurrencyFormatter.prototype.findCurrency = function (currencyCode) {
-  return data.find(function(c) { return c.code === currencyCode; });
+exports.findCurrency = function (currencyCode) {
+  return find(currencies, function(c) { return c.code === currencyCode; });
 }
-
-module.exports = new CurrencyFormatter();

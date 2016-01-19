@@ -143,6 +143,16 @@ describe("format", () => {
   })
 })
 
+describe("currencies", () => {
+  it("should be exposed as public via require()", () => {
+    assert(Array.isArray(require('./currencies')));
+  });
+
+  it("should be exposed as public via .currencies", () => {
+    assert(Array.isArray(currencyFormatter.currencies));
+  });
+})
+
 describe("findCurrency", () => {
   it("returns the expected currency for USD", () => {
     var expected = {

@@ -1,5 +1,6 @@
 var currencies = require('./currencies');
 var accounting = require('accounting');
+var find = require('lodash.find');
 
 exports.defaultCurrency = {
   symbol: '',
@@ -13,7 +14,7 @@ exports.defaultCurrency = {
 exports.currencies = currencies;
 
 exports.format = function (value, options) {
-  var currency = currencies.find(function(c) { return c.code === options.code; }) || exports.defaultCurrency;
+  var currency = find(currencies, function(c) { return c.code === options.code; }) || exports.defaultCurrency;
 
   var symbolOnLeft = currency.symbolOnLeft;
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
@@ -39,5 +40,5 @@ exports.format = function (value, options) {
 }
 
 exports.findCurrency = function (currencyCode) {
-  return currencies.find(function(c) { return c.code === currencyCode; });
+  return find(currencies, function(c) { return c.code === currencyCode; });
 }

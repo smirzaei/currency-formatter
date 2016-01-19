@@ -1,4 +1,4 @@
-var data = require('./data');
+var data = require('./currencies');
 var accounting = require('accounting');
 
 var CurrencyFormatter = function() {
@@ -11,6 +11,8 @@ var CurrencyFormatter = function() {
     decimalDigits: 2
   }
 }
+
+CurrencyFormatter.prototype.currencies = data;
 
 CurrencyFormatter.prototype.format = function (value, options) {
   var currency = data.find(function(c) { return c.code === options.code; }) || this.defaultCurrency;

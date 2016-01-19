@@ -1,21 +1,19 @@
-var data = require('./currencies');
+var currencies = require('./currencies');
 var accounting = require('accounting');
 
-var CurrencyFormatter = function() {
-  this.defaultCurrency = {
-    symbol: '',
-    thousandsSeparator: ',',
-    decimalSeparator: '.',
-    symbolOnLeft: true,
-    spaceBetweenAmountAndSymbol: false,
-    decimalDigits: 2
-  }
+exports.defaultCurrency = {
+  symbol: '',
+  thousandsSeparator: ',',
+  decimalSeparator: '.',
+  symbolOnLeft: true,
+  spaceBetweenAmountAndSymbol: false,
+  decimalDigits: 2
 }
 
-CurrencyFormatter.prototype.currencies = data;
+exports.currencies = currencies;
 
-CurrencyFormatter.prototype.format = function (value, options) {
-  var currency = data.find(function(c) { return c.code === options.code; }) || this.defaultCurrency;
+exports.format = function (value, options) {
+  var currency = currencies.find(function(c) { return c.code === options.code; }) || exports.defaultCurrency;
 
   var symbolOnLeft = currency.symbolOnLeft;
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
@@ -40,8 +38,6 @@ CurrencyFormatter.prototype.format = function (value, options) {
   })
 }
 
-CurrencyFormatter.prototype.findCurrency = function (currencyCode) {
-  return data.find(function(c) { return c.code === currencyCode; });
+exports.findCurrency = function (currencyCode) {
+  return currencies.find(function(c) { return c.code === currencyCode; });
 }
-
-module.exports = new CurrencyFormatter();

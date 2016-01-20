@@ -1,124 +1,124 @@
-var chai = require('chai');
-var assert = chai.assert;
-var currencyFormatter = require('./index');
+var chai = require('chai')
+var assert = chai.assert
+var currencyFormatter = require('./index')
 
-describe("format", () => {
-  context("Default Options", () => {
-    context("Symbol on the left", () => {
-      context("No Space", () => {
-        it("Returns $10.00 for 10", () => {
-          var result = currencyFormatter.format(10, { code: 'USD' });
-          assert.equal(result, '$10.00');
+describe('format', () => {
+  context('Default Options', () => {
+    context('Symbol on the left', () => {
+      context('No Space', () => {
+        it('Returns $10.00 for 10', () => {
+          var result = currencyFormatter.format(10, { code: 'USD' })
+          assert.equal(result, '$10.00')
         })
 
-        it("Returns $100.00 for 100", () => {
-          var result = currencyFormatter.format(100, { code: 'USD' });
-          assert.equal(result, '$100.00');
+        it('Returns $100.00 for 100', () => {
+          var result = currencyFormatter.format(100, { code: 'USD' })
+          assert.equal(result, '$100.00')
         })
 
-        it("Returns $1,000.00 for 1000", () => {
-          var result = currencyFormatter.format(1000, { code: 'USD' });
-          assert.equal(result, '$1,000.00');
+        it('Returns $1,000.00 for 1000', () => {
+          var result = currencyFormatter.format(1000, { code: 'USD' })
+          assert.equal(result, '$1,000.00')
         })
 
-        it("Returns $10,000.00 for 10000", () => {
-          var result = currencyFormatter.format(10000, { code: 'USD' });
-          assert.equal(result, '$10,000.00');
+        it('Returns $10,000.00 for 10000', () => {
+          var result = currencyFormatter.format(10000, { code: 'USD' })
+          assert.equal(result, '$10,000.00')
         })
 
-        it("Returns $1,000,000.00 for 1000000", () => {
-          var result = currencyFormatter.format(1000000, { code: 'USD' });
-          assert.equal(result, '$1,000,000.00');
+        it('Returns $1,000,000.00 for 1000000', () => {
+          var result = currencyFormatter.format(1000000, { code: 'USD' })
+          assert.equal(result, '$1,000,000.00')
         })
       })
 
-      context("With Space", () => {
-        it("Returns $ 10,00 for 10", () => {
-          var result = currencyFormatter.format(10, { code: 'ARS' });
-          assert.equal(result, '$ 10,00');
+      context('With Space', () => {
+        it('Returns $ 10,00 for 10', () => {
+          var result = currencyFormatter.format(10, { code: 'ARS' })
+          assert.equal(result, '$ 10,00')
         })
 
-        it("Returns $ 100,00 for 100", () => {
-          var result = currencyFormatter.format(100, { code: 'ARS' });
-          assert.equal(result, '$ 100,00');
+        it('Returns $ 100,00 for 100', () => {
+          var result = currencyFormatter.format(100, { code: 'ARS' })
+          assert.equal(result, '$ 100,00')
         })
 
-        it("Returns $ 1.000,00 for 1000", () => {
-          var result = currencyFormatter.format(1000, { code: 'ARS' });
-          assert.equal(result, '$ 1.000,00');
+        it('Returns $ 1.000,00 for 1000', () => {
+          var result = currencyFormatter.format(1000, { code: 'ARS' })
+          assert.equal(result, '$ 1.000,00')
         })
 
-        it("Returns $ 10.000,00 for 10000", () => {
-          var result = currencyFormatter.format(10000, { code: 'ARS' });
-          assert.equal(result, '$ 10.000,00');
+        it('Returns $ 10.000,00 for 10000', () => {
+          var result = currencyFormatter.format(10000, { code: 'ARS' })
+          assert.equal(result, '$ 10.000,00')
         })
 
-        it("Returns $ 1.000.000,00 for 1000000", () => {
-          var result = currencyFormatter.format(1000000, { code: 'ARS' });
-          assert.equal(result, '$ 1.000.000,00');
+        it('Returns $ 1.000.000,00 for 1000000', () => {
+          var result = currencyFormatter.format(1000000, { code: 'ARS' })
+          assert.equal(result, '$ 1.000.000,00')
         })
       })
     })
 
-    context("Symbol on the right", () => {
-      context("No Space", () => {
-        it("Returns 10.00Nfk for 10", () => {
-          var result = currencyFormatter.format(10, { code: 'ERN' });
-          assert.equal(result, '10.00Nfk');
+    context('Symbol on the right', () => {
+      context('No Space', () => {
+        it('Returns 10.00Nfk for 10', () => {
+          var result = currencyFormatter.format(10, { code: 'ERN' })
+          assert.equal(result, '10.00Nfk')
         })
 
-        it("Returns 100.00Nfk for 100", () => {
-          var result = currencyFormatter.format(100, { code: 'ERN' });
-          assert.equal(result, '100.00Nfk');
+        it('Returns 100.00Nfk for 100', () => {
+          var result = currencyFormatter.format(100, { code: 'ERN' })
+          assert.equal(result, '100.00Nfk')
         })
 
-        it("Returns 1,000.00Nfk for 1000", () => {
-          var result = currencyFormatter.format(1000, { code: 'ERN' });
-          assert.equal(result, '1,000.00Nfk');
+        it('Returns 1,000.00Nfk for 1000', () => {
+          var result = currencyFormatter.format(1000, { code: 'ERN' })
+          assert.equal(result, '1,000.00Nfk')
         })
 
-        it("Returns 10,000.00Nfk for 10000", () => {
-          var result = currencyFormatter.format(10000, { code: 'ERN' });
-          assert.equal(result, '10,000.00Nfk');
+        it('Returns 10,000.00Nfk for 10000', () => {
+          var result = currencyFormatter.format(10000, { code: 'ERN' })
+          assert.equal(result, '10,000.00Nfk')
         })
 
-        it("Returns 1,000,000.00Nfk for 1000000", () => {
-          var result = currencyFormatter.format(1000000, { code: 'ERN' });
-          assert.equal(result, '1,000,000.00Nfk');
+        it('Returns 1,000,000.00Nfk for 1000000', () => {
+          var result = currencyFormatter.format(1000000, { code: 'ERN' })
+          assert.equal(result, '1,000,000.00Nfk')
         })
       })
 
-      context("With Space", () => {
-        it("Returns 10,00 € for 10", () => {
-          var result = currencyFormatter.format(10, { code: 'EUR' });
-          assert.equal(result, '10,00 €');
+      context('With Space', () => {
+        it('Returns 10,00 € for 10', () => {
+          var result = currencyFormatter.format(10, { code: 'EUR' })
+          assert.equal(result, '10,00 €')
         })
 
-        it("Returns 100,00 € for 100", () => {
-          var result = currencyFormatter.format(100, { code: 'EUR' });
-          assert.equal(result, '100,00 €');
+        it('Returns 100,00 € for 100', () => {
+          var result = currencyFormatter.format(100, { code: 'EUR' })
+          assert.equal(result, '100,00 €')
         })
 
-        it("Returns 1 000,00 € for 1000", () => {
-          var result = currencyFormatter.format(1000, { code: 'EUR' });
-          assert.equal(result, '1 000,00 €');
+        it('Returns 1 000,00 € for 1000', () => {
+          var result = currencyFormatter.format(1000, { code: 'EUR' })
+          assert.equal(result, '1 000,00 €')
         })
 
-        it("Returns 10 000,00 € for 10000", () => {
-          var result = currencyFormatter.format(10000, { code: 'EUR' });
-          assert.equal(result, '10 000,00 €');
+        it('Returns 10 000,00 € for 10000', () => {
+          var result = currencyFormatter.format(10000, { code: 'EUR' })
+          assert.equal(result, '10 000,00 €')
         })
 
-        it("Returns 1 000 000,00 € for 1000000", () => {
-          var result = currencyFormatter.format(1000000, { code: 'EUR' });
-          assert.equal(result, '1 000 000,00 €');
+        it('Returns 1 000 000,00 € for 1000000', () => {
+          var result = currencyFormatter.format(1000000, { code: 'EUR' })
+          assert.equal(result, '1 000 000,00 €')
         })
       })
     })
   })
 
-  context("Overriding Options", () => {
-    it("Returns 1^000^000*000 ¯\\_(ツ)_/¯ for the given parameters", () => {
+  context('Overriding Options', () => {
+    it('Returns 1^000^000*000 ¯\\_(ツ)_/¯ for the given parameters', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'USD',
         symbol: '¯\\_(ツ)_/¯',
@@ -126,80 +126,80 @@ describe("format", () => {
         thousand: '^',
         precision: 3,
         format: '%v %s'
-      });
+      })
 
-      assert.equal(result, "1^000^000*000 ¯\\_(ツ)_/¯")
+      assert.equal(result, '1^000^000*000 ¯\\_(ツ)_/¯')
     })
 
-    it("Supports empty symbol", () => {
+    it('Supports empty symbol', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'USD',
         symbol: ''
       })
 
-      assert.equal(result, "1,000,000.00")
+      assert.equal(result, '1,000,000.00')
     })
 
-    it("Supports empty decimal", () => {
+    it('Supports empty decimal', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'USD',
         decimal: ''
       })
 
-      assert.equal(result, "$1,000,00000")
+      assert.equal(result, '$1,000,00000')
     })
 
-    it("Supports empty thousands separator", () => {
+    it('Supports empty thousands separator', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'USD',
         thousand: ''
       })
 
-      assert.equal(result, "$1000000.00")
+      assert.equal(result, '$1000000.00')
     })
 
-    it("Supports 0 precision digits", () => {
+    it('Supports 0 precision digits', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'USD',
         precision: 0
       })
 
-      assert.equal(result, "$1,000,000")
+      assert.equal(result, '$1,000,000')
     })
 
-    it("Supports empty format", () => {
+    it('Supports empty format', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'USD',
         format: ''
       })
 
-      assert.equal(result, "$1,000,000.00")
+      assert.equal(result, '$1,000,000.00')
     })
   })
 
-  context("When the currency is not found", () => {
-    it("Uses default values", () => {
+  context('When the currency is not found', () => {
+    it('Uses default values', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'None existing currency'
-      });
+      })
 
-      assert.equal(result, "1,000,000.00");
+      assert.equal(result, '1,000,000.00')
     })
   })
 })
 
-describe("currencies", () => {
-  it("should be exposed as public via require()", () => {
-    assert(Array.isArray(require('./currencies')));
-  });
+describe('currencies', () => {
+  it('should be exposed as public via require()', () => {
+    assert(Array.isArray(require('./currencies')))
+  })
 
-  it("should be exposed as public via .currencies", () => {
-    assert(Array.isArray(currencyFormatter.currencies));
-  });
+  it('should be exposed as public via .currencies', () => {
+    assert(Array.isArray(currencyFormatter.currencies))
+  })
 })
 
-describe("findCurrency", () => {
-  it("returns the expected currency for USD", () => {
+describe('findCurrency', () => {
+  it('returns the expected currency for USD', () => {
     var expected = {
       code: 'USD',
       symbol: '$',
@@ -208,14 +208,14 @@ describe("findCurrency", () => {
       symbolOnLeft: true,
       spaceBetweenAmountAndSymbol: false,
       decimalDigits: 2
-    };
+    }
 
-    var result = currencyFormatter.findCurrency("USD");
+    var result = currencyFormatter.findCurrency('USD')
 
-    assert.deepEqual(result, expected);
+    assert.deepEqual(result, expected)
   })
 
-  it("returns the expected currency for EUR", () => {
+  it('returns the expected currency for EUR', () => {
     var expected = {
       code: 'EUR',
       symbol: '€',
@@ -224,15 +224,15 @@ describe("findCurrency", () => {
       symbolOnLeft: false,
       spaceBetweenAmountAndSymbol: true,
       decimalDigits: 2
-    };
+    }
 
-    var result = currencyFormatter.findCurrency("EUR");
+    var result = currencyFormatter.findCurrency('EUR')
 
-    assert.deepEqual(result, expected);
+    assert.deepEqual(result, expected)
   })
 
-  it("returns undefined when it can't find the currency", () => {
-    var result = currencyFormatter.findCurrency("NON EXISTING");
-    assert.isUndefined(result);
+  it('returns undefined when it can\'t find the currency', () => {
+    var result = currencyFormatter.findCurrency('NON EXISTING')
+    assert.isUndefined(result)
   })
 })

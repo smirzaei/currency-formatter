@@ -1,6 +1,6 @@
-var currencies = require('./currencies');
-var accounting = require('accounting');
-var find = require('lodash.find');
+var currencies = require('./currencies')
+var accounting = require('accounting')
+var find = require('lodash.find')
 
 exports.defaultCurrency = {
   symbol: '',
@@ -11,23 +11,23 @@ exports.defaultCurrency = {
   decimalDigits: 2
 }
 
-exports.currencies = currencies;
+exports.currencies = currencies
 
 exports.format = function (value, options) {
-  var currency = find(currencies, function(c) { return c.code === options.code; }) || exports.defaultCurrency;
+  var currency = find(currencies, function (c) { return c.code === options.code }) || exports.defaultCurrency
 
-  var symbolOnLeft = currency.symbolOnLeft;
-  var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
+  var symbolOnLeft = currency.symbolOnLeft
+  var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
 
-  var format = "";
+  var format = ''
   if (symbolOnLeft) {
     format = spaceBetweenAmountAndSymbol
-              ? "%s %v"
-              : "%s%v"
+              ? '%s %v'
+              : '%s%v'
   } else {
     format = spaceBetweenAmountAndSymbol
-              ? "%v %s"
-              : "%v%s"
+              ? '%v %s'
+              : '%v%s'
   }
 
   return accounting.formatMoney(value, {
@@ -35,7 +35,7 @@ exports.format = function (value, options) {
               ? currency.symbol
               : options.symbol,
 
-    decimal:  isUndefined(options.decimal)
+    decimal: isUndefined(options.decimal)
               ? currency.decimalSeparator
               : options.decimal,
 
@@ -54,7 +54,7 @@ exports.format = function (value, options) {
 }
 
 exports.findCurrency = function (currencyCode) {
-  return find(currencies, function(c) { return c.code === currencyCode; });
+  return find(currencies, function (c) { return c.code === currencyCode })
 }
 
 function isUndefined (val) {

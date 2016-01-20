@@ -130,6 +130,51 @@ describe("format", () => {
 
       assert.equal(result, "1^000^000*000 ¯\\_(ツ)_/¯")
     })
+
+    it("Supports empty symbol", () => {
+      var result = currencyFormatter.format(1000000, {
+        code: 'USD',
+        symbol: ''
+      })
+
+      assert.equal(result, "1,000,000.00")
+    })
+
+    it("Supports empty decimal", () => {
+      var result = currencyFormatter.format(1000000, {
+        code: 'USD',
+        decimal: ''
+      })
+
+      assert.equal(result, "$1,000,00000")
+    })
+
+    it("Supports empty thousands separator", () => {
+      var result = currencyFormatter.format(1000000, {
+        code: 'USD',
+        thousand: ''
+      })
+
+      assert.equal(result, "$1000000.00")
+    })
+
+    it("Supports 0 precision digits", () => {
+      var result = currencyFormatter.format(1000000, {
+        code: 'USD',
+        precision: 0
+      })
+
+      assert.equal(result, "$1,000,000")
+    })
+
+    it("Supports empty format", () => {
+      var result = currencyFormatter.format(1000000, {
+        code: 'USD',
+        format: ''
+      })
+
+      assert.equal(result, "$1,000,000.00")
+    })
   })
 
   context("When the currency is not found", () => {

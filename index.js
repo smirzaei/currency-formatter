@@ -31,14 +31,32 @@ exports.format = function (value, options) {
   }
 
   return accounting.formatMoney(value, {
-    symbol: options.symbol || currency.symbol,
-    decimal: options.decimal || currency.decimalSeparator,
-    thousand: options.thousand || currency.thousandsSeparator,
-    precision: options.precision || currency.decimalDigits,
-    format: options.format || format
+    symbol: isUndefined(options.symbol)
+              ? currency.symbol
+              : options.symbol,
+
+    decimal:  isUndefined(options.decimal)
+              ? currency.decimalSeparator
+              : options.decimal,
+
+    thousand: isUndefined(options.thousand)
+              ? currency.thousandsSeparator
+              : options.thousand,
+
+    precision: typeof options.precision === 'number'
+              ? options.precision
+              : currency.decimalDigits,
+
+    format: typeof options.format === 'string'
+              ? options.format
+              : format
   })
 }
 
 exports.findCurrency = function (currencyCode) {
   return find(currencies, function(c) { return c.code === currencyCode; });
+}
+
+function isUndefined (val) {
+  return typeof val === 'undefined'
 }

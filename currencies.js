@@ -955,7 +955,7 @@ module.exports = [
   },
   {
     code: 'PHP',
-    symbol: 'Php',
+    symbol: '₱',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,

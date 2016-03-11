@@ -10,7 +10,7 @@ module.exports = [
   },
   {
     code: 'AFN',
-    symbol: 'AFN',
+    symbol: '؋',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -28,7 +28,7 @@ module.exports = [
   },
   {
     code: 'AMD',
-    symbol: 'դր.',
+    symbol: '֏',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: false,
@@ -37,7 +37,7 @@ module.exports = [
   },
   {
     code: 'ANG',
-    symbol: 'NAf.',
+    symbol: 'ƒ',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -73,7 +73,7 @@ module.exports = [
   },
   {
     code: 'AWG',
-    symbol: 'Afl.',
+    symbol: 'ƒ',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -82,7 +82,7 @@ module.exports = [
   },
   {
     code: 'AZN',
-    symbol: 'ман.',
+    symbol: '₼',
     thousandsSeparator: ' ',
     decimalSeparator: ',',
     symbolOnLeft: false,
@@ -109,7 +109,7 @@ module.exports = [
   },
   {
     code: 'BDT',
-    symbol: 'BDT',
+    symbol: '৳',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -424,7 +424,7 @@ module.exports = [
   },
   {
     code: 'GHS',
-    symbol: 'GH¢',
+    symbol: '₵',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -559,7 +559,7 @@ module.exports = [
   },
   {
     code: 'IRR',
-    symbol: 'ريال',
+    symbol: '﷼',
     thousandsSeparator: ',',
     decimalSeparator: '/',
     symbolOnLeft: true,
@@ -622,7 +622,7 @@ module.exports = [
   },
   {
     code: 'KHR',
-    symbol: 'KHR',
+    symbol: '៛',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: false,
@@ -676,7 +676,7 @@ module.exports = [
   },
   {
     code: 'KZT',
-    symbol: 'Т',
+    symbol: '₸',
     thousandsSeparator: ' ',
     decimalSeparator: '-',
     symbolOnLeft: true,
@@ -703,7 +703,7 @@ module.exports = [
   },
   {
     code: 'LKR',
-    symbol: 'Rp',
+    symbol: '₨',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -811,7 +811,7 @@ module.exports = [
   },
   {
     code: 'MUR',
-    symbol: 'Rs',
+    symbol: '₨',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -901,7 +901,7 @@ module.exports = [
   },
   {
     code: 'NPR',
-    symbol: 'रु',
+    symbol: '₨',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -919,7 +919,7 @@ module.exports = [
   },
   {
     code: 'OMR',
-    symbol: 'ر.ع.‏',
+    symbol: '﷼',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -964,7 +964,7 @@ module.exports = [
   },
   {
     code: 'PKR',
-    symbol: 'Rs',
+    symbol: '₨',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -982,7 +982,7 @@ module.exports = [
   },
   {
     code: 'PYG',
-    symbol: 'Gs',
+    symbol: '₲',
     thousandsSeparator: '.',
     decimalSeparator: ',',
     symbolOnLeft: true,
@@ -991,7 +991,7 @@ module.exports = [
   },
   {
     code: 'QAR',
-    symbol: 'ر.ق.‏',
+    symbol: '﷼',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -1018,7 +1018,7 @@ module.exports = [
   },
   {
     code: 'RUB',
-    symbol: 'p.',
+    symbol: '₽',
     thousandsSeparator: ' ',
     decimalSeparator: ',',
     symbolOnLeft: false,
@@ -1036,7 +1036,7 @@ module.exports = [
   },
   {
     code: 'SAR',
-    symbol: 'ر.س.‏',
+    symbol: '﷼',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -1054,7 +1054,7 @@ module.exports = [
   },
   {
     code: 'SCR',
-    symbol: 'Rs',
+    symbol: '₨',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -1072,7 +1072,7 @@ module.exports = [
   },
   {
     code: 'SDG',
-    symbol: 'ج.س.‏',
+    symbol: '£‏',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -1144,7 +1144,7 @@ module.exports = [
   },
   {
     code: 'SYP',
-    symbol: 'ل.س.‏',
+    symbol: '£',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -1252,7 +1252,7 @@ module.exports = [
   },
   {
     code: 'UAH',
-    symbol: 'грн.',
+    symbol: '₴',
     thousandsSeparator: ' ',
     decimalSeparator: ',',
     symbolOnLeft: false,
@@ -1378,7 +1378,7 @@ module.exports = [
   },
   {
     code: 'YER',
-    symbol: 'ر.ي.‏',
+    symbol: '﷼',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,

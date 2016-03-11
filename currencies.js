@@ -960,7 +960,7 @@ module.exports = [
     decimalSeparator: '.',
     symbolOnLeft: true,
     spaceBetweenAmountAndSymbol: false,
-    decimalDigits: 0
+    decimalDigits: 2
   },
   {
     code: 'PKR',

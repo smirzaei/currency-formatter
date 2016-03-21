@@ -189,6 +189,15 @@ module.exports = [
     decimalDigits: 2
   },
   {
+    code: 'BTC',
+    symbol: 'Ƀ',
+    thousandsSeparator: ',',
+    decimalSeparator: '.',
+    symbolOnLeft: false,
+    spaceBetweenAmountAndSymbol: false,
+    decimalDigits: 2
+  },
+  {
     code: 'BTN',
     symbol: 'Nu.',
     thousandsSeparator: ',',
@@ -398,6 +407,15 @@ module.exports = [
   {
     code: 'FJD',
     symbol: '$',
+    thousandsSeparator: ',',
+    decimalSeparator: '.',
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: false,
+    decimalDigits: 2
+  },
+    {
+    code: 'FKP',
+    symbol: '£',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,
@@ -810,6 +828,15 @@ module.exports = [
     decimalDigits: 2
   },
   {
+    code: 'MTL',
+    symbol: '₤',
+    thousandsSeparator: ',',
+    decimalSeparator: '.',
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: false,
+    decimalDigits: 2
+  },
+  {
     code: 'MUR',
     symbol: '₨',
     thousandsSeparator: ',',
@@ -1136,6 +1163,15 @@ module.exports = [
   {
     code: 'STD',
     symbol: 'Db',
+    thousandsSeparator: ',',
+    decimalSeparator: '.',
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: false,
+    decimalDigits: 2
+  },
+  {
+    code: 'SVC',
+    symbol: '₡',
     thousandsSeparator: ',',
     decimalSeparator: '.',
     symbolOnLeft: true,

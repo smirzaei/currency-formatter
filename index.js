@@ -22,11 +22,11 @@ exports.format = function (value, options) {
   var format = ''
   if (symbolOnLeft) {
     format = spaceBetweenAmountAndSymbol
-              ? '%s %v'
+              ? '%s %v'
               : '%s%v'
   } else {
     format = spaceBetweenAmountAndSymbol
-              ? '%v %s'
+              ? '%v %s'
               : '%v%s'
   }
 

@@ -1,6 +1,31 @@
 var currencies = require('./currencies')
 var accounting = require('accounting')
-var find = require('lodash.find')
+/*
+  This polyfill intends to emulate the Array.prototy.find() method
+  for browsers who don't support it yet.
+*/
+if (!Array.prototype.find) {
+  Array.prototype.find = function(predicate) {
+    if (this === null) {
+      throw new TypeError('Array.prototype.find called on null or undefined');
+    }
+    if (typeof predicate !== 'function') {
+      throw new TypeError('predicate must be a function');
+    }
+    var list = Object(this);
+    var length = list.length >>> 0;
+    var thisArg = arguments[1];
+    var value;
+
+    for (var i = 0; i < length; i++) {
+      value = list[i];
+      if (predicate.call(thisArg, value, i, list)) {
+        return value;
+      }
+    }
+    return undefined;
+  };
+}
 
 exports.defaultCurrency = {
   symbol: '',
@@ -14,7 +39,7 @@ exports.defaultCurrency = {
 exports.currencies = currencies
 
 exports.format = function (value, options) {
-  var currency = find(currencies, function (c) { return c.code === options.code }) || exports.defaultCurrency
+  var currency = findCurrency(options.code) || exports.defaultCurrency
 
   var symbolOnLeft = currency.symbolOnLeft
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
@@ -53,9 +78,11 @@ exports.format = function (value, options) {
   })
 }
 
-exports.findCurrency = function (currencyCode) {
-  return find(currencies, function (c) { return c.code === currencyCode })
+function findCurrency (currencyCode) {
+  return currencies.find(function (c) { return c.code === currencyCode })
 }
+
+exports.findCurrency = findCurrency
 
 function isUndefined (val) {
   return typeof val === 'undefined'

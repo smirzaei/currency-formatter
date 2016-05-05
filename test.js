@@ -35,27 +35,27 @@ describe('format', () => {
       context('With Space', () => {
         it('Returns $ 10,00 for 10', () => {
           var result = currencyFormatter.format(10, { code: 'ARS' })
-          assert.equal(result, '$ 10,00')
+          assert.equal(result, '$ 10,00')
         })
 
         it('Returns $ 100,00 for 100', () => {
           var result = currencyFormatter.format(100, { code: 'ARS' })
-          assert.equal(result, '$ 100,00')
+          assert.equal(result, '$ 100,00')
         })
 
         it('Returns $ 1.000,00 for 1000', () => {
           var result = currencyFormatter.format(1000, { code: 'ARS' })
-          assert.equal(result, '$ 1.000,00')
+          assert.equal(result, '$ 1.000,00')
         })
 
         it('Returns $ 10.000,00 for 10000', () => {
           var result = currencyFormatter.format(10000, { code: 'ARS' })
-          assert.equal(result, '$ 10.000,00')
+          assert.equal(result, '$ 10.000,00')
         })
 
         it('Returns $ 1.000.000,00 for 1000000', () => {
           var result = currencyFormatter.format(1000000, { code: 'ARS' })
-          assert.equal(result, '$ 1.000.000,00')
+          assert.equal(result, '$ 1.000.000,00')
         })
       })
     })
@@ -91,27 +91,27 @@ describe('format', () => {
       context('With Space', () => {
         it('Returns 10,00 € for 10', () => {
           var result = currencyFormatter.format(10, { code: 'EUR' })
-          assert.equal(result, '10,00 €')
+          assert.equal(result, '10,00 €')
         })
 
         it('Returns 100,00 € for 100', () => {
           var result = currencyFormatter.format(100, { code: 'EUR' })
-          assert.equal(result, '100,00 €')
+          assert.equal(result, '100,00 €')
         })
 
         it('Returns 1 000,00 € for 1000', () => {
           var result = currencyFormatter.format(1000, { code: 'EUR' })
-          assert.equal(result, '1 000,00 €')
+          assert.equal(result, '1 000,00 €')
         })
 
         it('Returns 10 000,00 € for 10000', () => {
           var result = currencyFormatter.format(10000, { code: 'EUR' })
-          assert.equal(result, '10 000,00 €')
+          assert.equal(result, '10 000,00 €')
         })
 
         it('Returns 1 000 000,00 € for 1000000', () => {
           var result = currencyFormatter.format(1000000, { code: 'EUR' })
-          assert.equal(result, '1 000 000,00 €')
+          assert.equal(result, '1 000 000,00 €')
         })
       })
     })

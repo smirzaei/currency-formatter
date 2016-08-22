@@ -253,7 +253,7 @@ module.exports = [
   },
   {
     code: 'CHF',
-    symbol: 'Fr.',
+    symbol: 'CHF.',
     thousandsSeparator: '\'',
     decimalSeparator: '.',
     symbolOnLeft: true,

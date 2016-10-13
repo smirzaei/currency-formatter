@@ -13,6 +13,8 @@ From @naganowl,
 Root cause is a combo of that and using of in CoffeeScript is bad because it turns into an in in Javascript which loops over keys you don't own. We have a lot of CoffeeScript doing this when it should be using in which turns into a basic for loop
 It's not a problem with the library as much as it's a problem with our problematic CoffeeScript
 
+Once/If the Array.Prototype polyfill is removed, the original repo can be used.
+
 Install
 =
 

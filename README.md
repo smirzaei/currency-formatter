@@ -68,7 +68,7 @@ currencyFormatter.format(-10, {
   }
 });
 
-// => -$10
+// => ($10)
 ```
 
 You could also get a list of all the currencies here using one of the following:

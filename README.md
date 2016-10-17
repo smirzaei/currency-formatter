@@ -61,16 +61,14 @@ currencyFormatter.format(1000000, {
 // => '1^000^000*0 @'
 
 // Different formatting for positive and negative values
-currencyFormatter.format(1000000, {
-  symbol: '@',
-  decimal: '*',
-  thousand: '^',
-  precision: 1,
+currencyFormatter.format(-10, {
   format: {
     pos: '%s%v' // %s is the symbol and %v is the value
-    neg: '-%s%v'
+    neg: '(%s%v)'
   }
 });
+
+// => -$10
 ```
 
 You could also get a list of all the currencies here using one of the following:

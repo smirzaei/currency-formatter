@@ -6,9 +6,9 @@ describe('format', () => {
   context('Default Options', () => {
     context('Symbol on the left', () => {
       context('No Space', () => {
-        it('Returns ($10.00) for -10', () => {
+        it('Returns -$10.00 for -10', () => {
           var result = currencyFormatter.format(-10, { code: 'USD' })
-          assert.equal(result, '($10.00)')
+          assert.equal(result, '-$10.00')
         })
 
         it('Returns $10.00 for 10', () => {
@@ -38,9 +38,9 @@ describe('format', () => {
       })
 
       context('With Space', () => {
-        it('Returns ($ 10,00) for -10', () => {
+        it('Returns -$ 10,00 for -10', () => {
           var result = currencyFormatter.format(-10, { code: 'ARS' })
-          assert.equal(result, '($ 10,00)')
+          assert.equal(result, '-$ 10,00')
         })
 
         it('Returns $ 10,00 for 10', () => {
@@ -72,9 +72,9 @@ describe('format', () => {
 
     context('Symbol on the right', () => {
       context('No Space', () => {
-        it('Returns (10.00Nfk) for -10', () => {
+        it('Returns -10.00Nfk for -10', () => {
           var result = currencyFormatter.format(-10, { code: 'ERN' })
-          assert.equal(result, '(10.00Nfk)')
+          assert.equal(result, '-10.00Nfk')
         })
 
         it('Returns 10.00Nfk for 10', () => {
@@ -104,9 +104,9 @@ describe('format', () => {
       })
 
       context('With Space', () => {
-        it('Returns (10,00 €) for -10', () => {
+        it('Returns -10,00 € for -10', () => {
           var result = currencyFormatter.format(-10, { code: 'EUR' })
-          assert.equal(result, '(10,00 €)')
+          assert.equal(result, '-10,00 €')
         })
 
         it('Returns 10,00 € for 10', () => {
@@ -168,11 +168,11 @@ describe('format', () => {
         code: 'USD',
         format: {
           pos: '%s  %v',
-          neg: '-%s%v'
+          neg: '(%s%v)'
         }
       })
 
-      assert.equal(result, '-$10.00')
+      assert.equal(result, '($10.00)')
     })
 
     it('Supports empty symbol', () => {

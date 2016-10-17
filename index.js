@@ -38,22 +38,50 @@ exports.defaultCurrency = {
 
 exports.currencies = currencies
 
+var formatMapping = [
+  {
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: false,
+    format: {
+      pos: '%s%v',
+      neg: '(%s%v)'
+    }
+  },
+  {
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: true,
+    format: {
+      pos: '%s %v',
+      neg: '(%s %v)'
+    }
+  },
+  {
+    symbolOnLeft: false,
+    spaceBetweenAmountAndSymbol: false,
+    format: {
+      pos: '%v%s',
+      neg: '(%v%s)'
+    }
+  },
+  {
+    symbolOnLeft: false,
+    spaceBetweenAmountAndSymbol: true,
+    format: {
+      pos: '%v %s',
+      neg: '(%v %s)'
+    }
+  }
+]
+
 exports.format = function (value, options) {
   var currency = findCurrency(options.code) || exports.defaultCurrency
 
   var symbolOnLeft = currency.symbolOnLeft
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
 
-  var format = ''
-  if (symbolOnLeft) {
-    format = spaceBetweenAmountAndSymbol
-              ? '%s %v'
-              : '%s%v'
-  } else {
-    format = spaceBetweenAmountAndSymbol
-              ? '%v %s'
-              : '%v%s'
-  }
+  var format = formatMapping.find(function(f) {
+    return f.symbolOnLeft == symbolOnLeft && f.spaceBetweenAmountAndSymbol == spaceBetweenAmountAndSymbol
+  }).format
 
   return accounting.formatMoney(value, {
     symbol: isUndefined(options.symbol)

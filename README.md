@@ -64,7 +64,8 @@ currencyFormatter.format(1000000, {
 currencyFormatter.format(-10, {
   format: {
     pos: '%s%v' // %s is the symbol and %v is the value
-    neg: '(%s%v)'
+    neg: '(%s%v)',
+    zero: '%s%v'
   }
 });
 

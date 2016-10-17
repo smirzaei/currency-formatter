@@ -11,6 +11,11 @@ describe('format', () => {
           assert.equal(result, '-$10.00')
         })
 
+        it('Returns $0.00 for 0', () => {
+          var result = currencyFormatter.format(0, { code: 'USD' })
+          assert.equal(result, '$0.00')
+        })
+
         it('Returns $10.00 for 10', () => {
           var result = currencyFormatter.format(10, { code: 'USD' })
           assert.equal(result, '$10.00')
@@ -41,6 +46,11 @@ describe('format', () => {
         it('Returns -$ 10,00 for -10', () => {
           var result = currencyFormatter.format(-10, { code: 'ARS' })
           assert.equal(result, '-$ 10,00')
+        })
+
+        it('Returns $ 0,00 for 0', () => {
+          var result = currencyFormatter.format(0, { code: 'ARS' })
+          assert.equal(result, '$ 0,00')
         })
 
         it('Returns $ 10,00 for 10', () => {
@@ -77,6 +87,11 @@ describe('format', () => {
           assert.equal(result, '-10.00Nfk')
         })
 
+        it('Returns 0.00Nfk for 0', () => {
+          var result = currencyFormatter.format(0, { code: 'ERN' })
+          assert.equal(result, '0.00Nfk')
+        })
+
         it('Returns 10.00Nfk for 10', () => {
           var result = currencyFormatter.format(10, { code: 'ERN' })
           assert.equal(result, '10.00Nfk')
@@ -107,6 +122,11 @@ describe('format', () => {
         it('Returns -10,00 € for -10', () => {
           var result = currencyFormatter.format(-10, { code: 'EUR' })
           assert.equal(result, '-10,00 €')
+        })
+
+        it('Returns 0,00 € for 0', () => {
+          var result = currencyFormatter.format(0, { code: 'EUR' })
+          assert.equal(result, '0,00 €')
         })
 
         it('Returns 10,00 € for 10', () => {

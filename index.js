@@ -44,7 +44,8 @@ var formatMapping = [
     spaceBetweenAmountAndSymbol: false,
     format: {
       pos: '%s%v',
-      neg: '-%s%v'
+      neg: '-%s%v',
+      zero: '%s%v'
     }
   },
   {
@@ -52,7 +53,8 @@ var formatMapping = [
     spaceBetweenAmountAndSymbol: true,
     format: {
       pos: '%s %v',
-      neg: '-%s %v'
+      neg: '-%s %v',
+      zero: '%s %v'
     }
   },
   {
@@ -60,7 +62,8 @@ var formatMapping = [
     spaceBetweenAmountAndSymbol: false,
     format: {
       pos: '%v%s',
-      neg: '-%v%s'
+      neg: '-%v%s',
+      zero: '%v%s'
     }
   },
   {
@@ -68,7 +71,8 @@ var formatMapping = [
     spaceBetweenAmountAndSymbol: true,
     format: {
       pos: '%v %s',
-      neg: '-%v %s'
+      neg: '-%v %s',
+      zero: '%v %s'
     }
   }
 ]

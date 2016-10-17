@@ -100,7 +100,7 @@ exports.format = function (value, options) {
               ? options.precision
               : currency.decimalDigits,
 
-    format: typeof options.format === 'string'
+    format: ['string', 'object'].indexOf(typeof options.format) > -1
               ? options.format
               : format
   })

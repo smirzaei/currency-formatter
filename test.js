@@ -151,6 +151,30 @@ describe('format', () => {
       assert.equal(result, '1^000^000*000 ¯\\_(ツ)_/¯')
     })
 
+    it('Supports objects for format, to override the positive result', () => {
+      var result = currencyFormatter.format(10, {
+        code: 'USD',
+        format: {
+          pos: '%s  %v',
+          neg: '-%s%v'
+        }
+      })
+
+      assert.equal(result, '$  10.00')
+    })
+
+    it('Supports objects for format, to override the negative result', () => {
+      var result = currencyFormatter.format(-10, {
+        code: 'USD',
+        format: {
+          pos: '%s  %v',
+          neg: '-%s%v'
+        }
+      })
+
+      assert.equal(result, '-$10.00')
+    })
+
     it('Supports empty symbol', () => {
       var result = currencyFormatter.format(1000000, {
         code: 'USD',

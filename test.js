@@ -6,6 +6,11 @@ describe('format', () => {
   context('Default Options', () => {
     context('Symbol on the left', () => {
       context('No Space', () => {
+        it('Returns -$10.00 for -10', () => {
+          var result = currencyFormatter.format(-10, { code: 'USD' })
+          assert.equal(result, '-$10.00')
+        })
+
         it('Returns $10.00 for 10', () => {
           var result = currencyFormatter.format(10, { code: 'USD' })
           assert.equal(result, '$10.00')
@@ -33,6 +38,11 @@ describe('format', () => {
       })
 
       context('With Space', () => {
+        it('Returns -$ 10,00 for -10', () => {
+          var result = currencyFormatter.format(-10, { code: 'ARS' })
+          assert.equal(result, '-$ 10,00')
+        })
+
         it('Returns $ 10,00 for 10', () => {
           var result = currencyFormatter.format(10, { code: 'ARS' })
           assert.equal(result, '$ 10,00')
@@ -62,6 +72,11 @@ describe('format', () => {
 
     context('Symbol on the right', () => {
       context('No Space', () => {
+        it('Returns -10.00Nfk for -10', () => {
+          var result = currencyFormatter.format(-10, { code: 'ERN' })
+          assert.equal(result, '-10.00Nfk')
+        })
+
         it('Returns 10.00Nfk for 10', () => {
           var result = currencyFormatter.format(10, { code: 'ERN' })
           assert.equal(result, '10.00Nfk')
@@ -89,6 +104,11 @@ describe('format', () => {
       })
 
       context('With Space', () => {
+        it('Returns -10,00 € for -10', () => {
+          var result = currencyFormatter.format(-10, { code: 'EUR' })
+          assert.equal(result, '-10,00 €')
+        })
+
         it('Returns 10,00 € for 10', () => {
           var result = currencyFormatter.format(10, { code: 'EUR' })
           assert.equal(result, '10,00 €')
@@ -129,6 +149,30 @@ describe('format', () => {
       })
 
       assert.equal(result, '1^000^000*000 ¯\\_(ツ)_/¯')
+    })
+
+    it('Supports objects for format, to override the positive result', () => {
+      var result = currencyFormatter.format(10, {
+        code: 'USD',
+        format: {
+          pos: '%s  %v',
+          neg: '-%s%v'
+        }
+      })
+
+      assert.equal(result, '$  10.00')
+    })
+
+    it('Supports objects for format, to override the negative result', () => {
+      var result = currencyFormatter.format(-10, {
+        code: 'USD',
+        format: {
+          pos: '%s  %v',
+          neg: '(%s%v)'
+        }
+      })
+
+      assert.equal(result, '($10.00)')
     })
 
     it('Supports empty symbol', () => {

@@ -49,7 +49,6 @@ Advanced Usage
 Currency Formatter uses [accounting](https://github.com/openexchangerates/accounting.js) library under the hood, and you can use its options to override the default behavior.
 
 ```JAVASCRIPT
-
 var currencyFormatter = require('currency-formatter');
 currencyFormatter.format(1000000, {
   symbol: '@',
@@ -60,6 +59,16 @@ currencyFormatter.format(1000000, {
 });
 
 // => '1^000^000*0 @'
+
+// Different formatting for positive and negative values
+currencyFormatter.format(-10, {
+  format: {
+    pos: '%s%v' // %s is the symbol and %v is the value
+    neg: '(%s%v)'
+  }
+});
+
+// => ($10)
 ```
 
 You could also get a list of all the currencies here using one of the following:

@@ -562,7 +562,7 @@ module.exports = [
     symbol: '₹',
     thousandsSeparator: ',',
     decimalSeparator: '.',
-    symbolOnLeft: false,
+    symbolOnLeft: true,
     spaceBetweenAmountAndSymbol: false,
     decimalDigits: 2
   },

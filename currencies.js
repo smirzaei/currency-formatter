@@ -344,9 +344,9 @@ module.exports = [
   {
     code: 'DKK',
     symbol: 'kr.',
-    thousandsSeparator: '.',
+    thousandsSeparator: '',
     decimalSeparator: ',',
-    symbolOnLeft: true,
+    symbolOnLeft: false,
     spaceBetweenAmountAndSymbol: true,
     decimalDigits: 2
   },

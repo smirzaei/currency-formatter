@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "accounting": "^0.4.1",
-    "locale-currency": "0.0.1"
+    "locale-currency": "0.0.1",
+    "object-assign": "^4.1.1"
   }
 }

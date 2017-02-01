@@ -1,5 +1,9 @@
-var currencies = require('./currencies')
 var accounting = require('accounting')
+var assign = require('object-assign')
+var localeCurrency = require('locale-currency')
+var currencies = require('./currencies.json')
+var localeFormats = require('./localeFormats.json')
+
 /*
   This polyfill intends to emulate the Array.prototy.find() method
   for browsers who don't support it yet.
@@ -37,6 +41,8 @@ exports.defaultCurrency = {
 }
 
 exports.currencies = currencies
+
+var defaultLocaleFormat = {}
 
 var formatMapping = [
   {
@@ -78,8 +84,10 @@ var formatMapping = [
 ]
 
 exports.format = function (value, options) {
-  var currency = findCurrency(options.code) || exports.defaultCurrency
-
+  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
+  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
+  var currency = assign({}, exports.defaultCurrency, findCurrency(code), localeFormat)
+  
   var symbolOnLeft = currency.symbolOnLeft
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
 
@@ -111,7 +119,7 @@ exports.format = function (value, options) {
 }
 
 function findCurrency (currencyCode) {
-  return currencies.find(function (c) { return c.code === currencyCode })
+  return currencies[currencyCode];
 }
 
 exports.findCurrency = findCurrency

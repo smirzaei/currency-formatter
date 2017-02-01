@@ -271,7 +271,7 @@ describe('format', () => {
   })
 })
 
-xdescribe('currencies', () => {
+describe('currencies', () => {
   it('should be exposed as public via require()', () => {
     assert(Array.isArray(require('./currencies')))
   })

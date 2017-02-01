@@ -31,7 +31,7 @@ if (!Array.prototype.find) {
   };
 }
 
-exports.defaultCurrency = {
+var defaultCurrency = {
   symbol: '',
   thousandsSeparator: ',',
   decimalSeparator: '.',
@@ -39,8 +39,6 @@ exports.defaultCurrency = {
   spaceBetweenAmountAndSymbol: false,
   decimalDigits: 2
 }
-
-exports.currencies = currencies
 
 var defaultLocaleFormat = {}
 
@@ -83,10 +81,10 @@ var formatMapping = [
   }
 ]
 
-exports.format = function (value, options) {
+function format(value, options) {
   var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
   var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
-  var currency = assign({}, exports.defaultCurrency, findCurrency(code), localeFormat)
+  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
   
   var symbolOnLeft = currency.symbolOnLeft
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
@@ -122,8 +120,15 @@ function findCurrency (currencyCode) {
   return currencies[currencyCode];
 }
 
-exports.findCurrency = findCurrency
-
 function isUndefined (val) {
   return typeof val === 'undefined'
+}
+
+module.exports = {
+  defaultCurrency: defaultCurrency,
+  get currencies() {
+    return Object.keys(currencies).map(key => currencies[key])
+  },
+  findCurrency: findCurrency,
+  format: format
 }

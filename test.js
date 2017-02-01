@@ -167,12 +167,12 @@ describe('format', () => {
     })
     
     it('Allows for overriding with options', () => {
-	    var result = currencyFormatter.format(1234.56, {
-		    locale: 'nl-NL',
+      var result = currencyFormatter.format(1234.56, {
+        locale: 'nl-NL',
         decimal: '__'
-	    })
+      })
 
-	    assert.equal(result, '€1.234__56')
+      assert.equal(result, '€1.234__56')
     });
   })
 

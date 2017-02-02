@@ -117,7 +117,7 @@ function format(value, options) {
 }
 
 function findCurrency (currencyCode) {
-  return currencies[currencyCode];
+  return currencies[currencyCode]
 }
 
 function isUndefined (val) {
@@ -127,7 +127,10 @@ function isUndefined (val) {
 module.exports = {
   defaultCurrency: defaultCurrency,
   get currencies() {
-    return Object.keys(currencies).map(key => currencies[key])
+    // In favor of backwards compatibility, the currencies map is converted to an array here
+    return Object.keys(currencies).map(function(key) {
+      return currencies[key]
+    })
   },
   findCurrency: findCurrency,
   format: format

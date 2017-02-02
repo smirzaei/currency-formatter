@@ -4,33 +4,6 @@ var localeCurrency = require('locale-currency')
 var currencies = require('./currencies.json')
 var localeFormats = require('./localeFormats.json')
 
-/*
-  This polyfill intends to emulate the Array.prototy.find() method
-  for browsers who don't support it yet.
-*/
-if (!Array.prototype.find) {
-  Array.prototype.find = function(predicate) {
-    if (this === null) {
-      throw new TypeError('Array.prototype.find called on null or undefined');
-    }
-    if (typeof predicate !== 'function') {
-      throw new TypeError('predicate must be a function');
-    }
-    var list = Object(this);
-    var length = list.length >>> 0;
-    var thisArg = arguments[1];
-    var value;
-
-    for (var i = 0; i < length; i++) {
-      value = list[i];
-      if (predicate.call(thisArg, value, i, list)) {
-        return value;
-      }
-    }
-    return undefined;
-  };
-}
-
 var defaultCurrency = {
   symbol: '',
   thousandsSeparator: ',',
@@ -89,9 +62,9 @@ function format(value, options) {
   var symbolOnLeft = currency.symbolOnLeft
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
 
-  var format = formatMapping.find(function(f) {
+  var format = formatMapping.filter(function(f) {
     return f.symbolOnLeft == symbolOnLeft && f.spaceBetweenAmountAndSymbol == spaceBetweenAmountAndSymbol
-  }).format
+  })[0].format
 
   return accounting.formatMoney(value, {
     symbol: isUndefined(options.symbol)

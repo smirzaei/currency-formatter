@@ -7,12 +7,16 @@ A simple Javascript utility that helps you to display currency properly
 Install
 =
 
-`npm install currency-formatter --save`
+```bash
+npm install currency-formatter --save
+```
 
 Basic Usage
 =
 
-```JAVASCRIPT
+By specifying the currency code
+
+```js
 var currencyFormatter = require('currency-formatter');
 
 currencyFormatter.format(1000000, { code: 'USD' });
@@ -23,6 +27,26 @@ currencyFormatter.format(1000000, { code: 'GBP' });
 
 currencyFormatter.format(1000000, { code: 'EUR' });
 // => '1 000 000,00 €'
+```
+
+Or by specifying the locale
+```js
+var currencyFormatter = require('currency-formatter');
+
+currencyFormatter.format(1000000, { locale: 'en-US' });
+// => '$1,000,000.00'
+
+currencyFormatter.format(1000000, { locale: 'en-GB' });
+// => '£1,000,000.00'
+
+currencyFormatter.format(1000000, { locale: 'GB' });
+// => '£1,000,000.00'
+
+currencyFormatter.format(1000000, { locale: 'de-DE' });
+// => '1 000 000,00 €'
+
+currencyFormatter.format(1000000, { locale: 'nl-NL' });
+// => '€1.000.000,00'
 ```
 
 You can also get the currency information.
@@ -79,6 +103,25 @@ var currencies = require('currency-formatter/currencies');
 // OR
 var currencyFormatter = require('currency-formatter');
 var currencies = currencyFormatter.currencies;
+```
+
+Or the currencies in hashmap shape:
+
+```js
+var currencies = require('currency-formatter/currencies.json');
+// Result:
+// {
+//  "USD": {
+//    "code": "USD",
+//    "symbol": "$",
+//    "thousandsSeparator": ",",
+//    "decimalSeparator": ".",
+//    "symbolOnLeft": true,
+//    "spaceBetweenAmountAndSymbol": false,
+//    "decimalDigits": 2
+//  },
+//  ...more currencies
+// }
 ```
 
 License

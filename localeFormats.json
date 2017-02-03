@@ -1,0 +1,32 @@
+{
+	"de-AT": {
+		"thousandsSeparator": "."
+	},
+	"el-GR": {
+		"symbolOnLeft": true,
+		"spaceBetweenAmountAndSymbol": false,
+		"thousandsSeparator": "."
+	},
+	"en-IE": {
+		"symbolOnLeft": true,
+		"thousandsSeparator": ","
+	},
+	"es-ES": {
+		"thousandsSeparator": "."
+	},
+	"it-IT": {
+		"symbolOnLeft": true,
+		"spaceBetweenAmountAndSymbol": false,
+		"thousandsSeparator": "."
+	},
+	"nl-NL": {
+		"symbolOnLeft": true,
+		"spaceBetweenAmountAndSymbol": false,
+		"thousandsSeparator": "."
+	},
+	"nl-BE": {
+		"symbolOnLeft": true,
+		"spaceBetweenAmountAndSymbol": false,
+		"thousandsSeparator": "."
+	}
+}

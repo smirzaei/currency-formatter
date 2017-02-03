@@ -1,33 +1,10 @@
-var currencies = require('./currencies')
 var accounting = require('accounting')
-/*
-  This polyfill intends to emulate the Array.prototy.find() method
-  for browsers who don't support it yet.
-*/
-if (!Array.prototype.find) {
-  Array.prototype.find = function(predicate) {
-    if (this === null) {
-      throw new TypeError('Array.prototype.find called on null or undefined');
-    }
-    if (typeof predicate !== 'function') {
-      throw new TypeError('predicate must be a function');
-    }
-    var list = Object(this);
-    var length = list.length >>> 0;
-    var thisArg = arguments[1];
-    var value;
+var assign = require('object-assign')
+var localeCurrency = require('locale-currency')
+var currencies = require('./currencies.json')
+var localeFormats = require('./localeFormats.json')
 
-    for (var i = 0; i < length; i++) {
-      value = list[i];
-      if (predicate.call(thisArg, value, i, list)) {
-        return value;
-      }
-    }
-    return undefined;
-  };
-}
-
-exports.defaultCurrency = {
+var defaultCurrency = {
   symbol: '',
   thousandsSeparator: ',',
   decimalSeparator: '.',
@@ -36,7 +13,7 @@ exports.defaultCurrency = {
   decimalDigits: 2
 }
 
-exports.currencies = currencies
+var defaultLocaleFormat = {}
 
 var formatMapping = [
   {
@@ -77,15 +54,17 @@ var formatMapping = [
   }
 ]
 
-exports.format = function (value, options) {
-  var currency = findCurrency(options.code) || exports.defaultCurrency
-
+function format(value, options) {
+  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
+  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
+  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
+  
   var symbolOnLeft = currency.symbolOnLeft
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
 
-  var format = formatMapping.find(function(f) {
+  var format = formatMapping.filter(function(f) {
     return f.symbolOnLeft == symbolOnLeft && f.spaceBetweenAmountAndSymbol == spaceBetweenAmountAndSymbol
-  }).format
+  })[0].format
 
   return accounting.formatMoney(value, {
     symbol: isUndefined(options.symbol)
@@ -111,11 +90,21 @@ exports.format = function (value, options) {
 }
 
 function findCurrency (currencyCode) {
-  return currencies.find(function (c) { return c.code === currencyCode })
+  return currencies[currencyCode]
 }
-
-exports.findCurrency = findCurrency
 
 function isUndefined (val) {
   return typeof val === 'undefined'
+}
+
+module.exports = {
+  defaultCurrency: defaultCurrency,
+  get currencies() {
+    // In favor of backwards compatibility, the currencies map is converted to an array here
+    return Object.keys(currencies).map(function(key) {
+      return currencies[key]
+    })
+  },
+  findCurrency: findCurrency,
+  format: format
 }

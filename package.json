@@ -1,6 +1,6 @@
 {
   "name": "currency-formatter",
-  "version": "1.0.8",
+  "version": "1.1.0",
   "description": "A simple Javascript utility that helps you to display currency properly",
   "main": "index.js",
   "scripts": {

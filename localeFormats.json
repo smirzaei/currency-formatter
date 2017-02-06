@@ -28,5 +28,10 @@
 		"symbolOnLeft": true,
 		"spaceBetweenAmountAndSymbol": false,
 		"thousandsSeparator": "."
+	},
+	"ko-KR": {
+		"symbolOnLeft": true,
+		"spaceBetweenAmountAndSymbol": false,
+		"thousandsSeparator": "."
 	}
 }

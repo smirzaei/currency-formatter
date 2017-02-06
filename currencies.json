@@ -1438,5 +1438,14 @@
 		"symbolOnLeft": true,
 		"spaceBetweenAmountAndSymbol": false,
 		"decimalDigits": 2
+	},
+	"WON": {
+		"code": "WON",
+		"symbol": "₩",
+		"thousandsSeparator": ",",
+		"decimalSeparator": ".",
+		"symbolOnLeft": true,
+		"spaceBetweenAmountAndSymbol": false,
+		"decimalDigits": 2
 	}
 }

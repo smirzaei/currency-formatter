@@ -165,7 +165,7 @@ describe('format', () => {
       
       assert.equal(result, '€1.234,56')
     })
-    
+
     it('Allows for overriding with options', () => {
       var result = currencyFormatter.format(1234.56, {
         locale: 'nl-NL',
@@ -173,6 +173,15 @@ describe('format', () => {
       })
 
       assert.equal(result, '€1.234__56')
+    });
+
+    it('Allows for using locale settings with a custom currency', () => {
+      var result = currencyFormatter.format(1234.56, {
+        locale: 'nl-NL',
+        code: 'USD'
+      })
+
+      assert.equal(result, '$1.234,56')
     });
   })
 

@@ -1,37 +1,51 @@
 {
-	"de-AT": {
-		"thousandsSeparator": "."
-	},
-	"el-GR": {
-		"symbolOnLeft": true,
-		"spaceBetweenAmountAndSymbol": false,
-		"thousandsSeparator": "."
-	},
-	"en-IE": {
-		"symbolOnLeft": true,
-		"thousandsSeparator": ","
-	},
-	"es-ES": {
-		"thousandsSeparator": "."
-	},
-	"it-IT": {
-		"symbolOnLeft": true,
-		"spaceBetweenAmountAndSymbol": false,
-		"thousandsSeparator": "."
-	},
-	"nl-NL": {
-		"symbolOnLeft": true,
-		"spaceBetweenAmountAndSymbol": false,
-		"thousandsSeparator": "."
-	},
-	"nl-BE": {
-		"symbolOnLeft": true,
-		"spaceBetweenAmountAndSymbol": false,
-		"thousandsSeparator": "."
-	},
-	"ko-KR": {
-		"symbolOnLeft": true,
-		"spaceBetweenAmountAndSymbol": false,
-		"thousandsSeparator": "."
-	}
+  "de-AT": {
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "symbolOnLeft": false,
+    "spaceBetweenAmountAndSymbol": true,
+    "decimalDigits": 2
+  },
+  "el-GR": {
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
+  },
+  "en-IE": {
+    "symbolOnLeft": true,
+    "thousandsSeparator": ",",
+    "decimalSeparator": ".",
+    "spaceBetweenAmountAndSymbol": true,
+    "decimalDigits": 2
+  },
+  "es-ES": {
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "symbolOnLeft": false,
+    "spaceBetweenAmountAndSymbol": true,
+    "decimalDigits": 2
+  },
+  "it-IT": {
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
+  },
+  "nl-NL": {
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
+  },
+  "nl-BE": {
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
+  }
 }

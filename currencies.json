@@ -1424,10 +1424,10 @@
   "ZAR": {
     "code": "ZAR",
     "symbol": "R",
-    "thousandsSeparator": ",",
-    "decimalSeparator": ".",
+    "thousandsSeparator": " ",
+    "decimalSeparator": ",",
     "symbolOnLeft": true,
-    "spaceBetweenAmountAndSymbol": true,
+    "spaceBetweenAmountAndSymbol": false,
     "decimalDigits": 2
   },
   "ZMW": {

@@ -1,0 +1,7 @@
+{
+  "code": "BND",
+  "symbol": "$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 0
+}

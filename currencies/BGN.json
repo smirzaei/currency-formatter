@@ -1,0 +1,7 @@
+{
+  "code": "BGN",
+  "symbol": "лв.",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

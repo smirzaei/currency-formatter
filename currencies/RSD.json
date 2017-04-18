@@ -1,0 +1,7 @@
+{
+  "code": "RSD",
+  "symbol": "Дин.",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

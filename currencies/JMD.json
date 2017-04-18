@@ -1,0 +1,7 @@
+{
+  "code": "JMD",
+  "symbol": "J$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

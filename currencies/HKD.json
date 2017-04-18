@@ -1,0 +1,7 @@
+{
+  "code": "HKD",
+  "symbol": "HK$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

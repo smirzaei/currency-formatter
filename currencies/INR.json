@@ -1,0 +1,7 @@
+{
+  "code": "INR",
+  "symbol": "₹",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

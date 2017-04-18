@@ -1,0 +1,7 @@
+{
+  "code": "TZS",
+  "symbol": "TSh",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

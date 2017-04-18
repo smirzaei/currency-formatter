@@ -1,0 +1,7 @@
+{
+  "code": "DOP",
+  "symbol": "RD$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

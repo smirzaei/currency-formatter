@@ -1,0 +1,7 @@
+{
+  "code": "MVR",
+  "symbol": "MVR",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 1
+}

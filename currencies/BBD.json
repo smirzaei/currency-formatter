@@ -1,0 +1,7 @@
+{
+  "code": "BBD",
+  "symbol": "$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

@@ -1,0 +1,7 @@
+{
+  "code": "NAD",
+  "symbol": "$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

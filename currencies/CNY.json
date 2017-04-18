@@ -1,0 +1,7 @@
+{
+  "code": "CNY",
+  "symbol": "¥",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

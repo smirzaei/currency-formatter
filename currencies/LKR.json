@@ -1,0 +1,7 @@
+{
+  "code": "LKR",
+  "symbol": "₨",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 0
+}

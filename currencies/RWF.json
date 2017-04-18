@@ -1,0 +1,7 @@
+{
+  "code": "RWF",
+  "symbol": "RWF",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

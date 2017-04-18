@@ -1,0 +1,7 @@
+{
+  "code": "TWD",
+  "symbol": "NT$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

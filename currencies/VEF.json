@@ -1,0 +1,7 @@
+{
+  "code": "VEF",
+  "symbol": "Bs. F.",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

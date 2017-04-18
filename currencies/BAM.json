@@ -1,0 +1,7 @@
+{
+  "code": "BAM",
+  "symbol": "КМ",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

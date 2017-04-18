@@ -1,0 +1,7 @@
+{
+  "code": "SLL",
+  "symbol": "Le",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

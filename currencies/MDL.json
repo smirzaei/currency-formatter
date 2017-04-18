@@ -1,0 +1,7 @@
+{
+  "code": "MDL",
+  "symbol": "lei",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

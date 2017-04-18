@@ -1,0 +1,7 @@
+{
+  "code": "MYR",
+  "symbol": "RM",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

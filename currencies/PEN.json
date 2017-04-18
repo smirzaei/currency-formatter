@@ -1,0 +1,7 @@
+{
+  "code": "PEN",
+  "symbol": "S/.",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

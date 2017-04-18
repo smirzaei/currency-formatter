@@ -1,0 +1,7 @@
+{
+  "code": "BOB",
+  "symbol": "Bs",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

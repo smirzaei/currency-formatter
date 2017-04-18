@@ -1,0 +1,7 @@
+{
+  "code": "KYD",
+  "symbol": "$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

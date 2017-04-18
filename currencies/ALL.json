@@ -1,0 +1,7 @@
+{
+  "code": "ALL",
+  "symbol": "Lek",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

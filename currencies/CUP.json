@@ -1,0 +1,7 @@
+{
+  "code": "CUP",
+  "symbol": "$MN",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

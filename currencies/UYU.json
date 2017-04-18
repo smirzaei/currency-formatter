@@ -1,0 +1,7 @@
+{
+  "code": "UYU",
+  "symbol": "$U",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

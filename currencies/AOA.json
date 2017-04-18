@@ -1,0 +1,7 @@
+{
+  "code": "AOA",
+  "symbol": "Kz",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

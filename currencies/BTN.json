@@ -1,0 +1,7 @@
+{
+  "code": "BTN",
+  "symbol": "Nu.",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 1
+}

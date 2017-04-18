@@ -1,0 +1,7 @@
+{
+  "code": "UGX",
+  "symbol": "USh",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

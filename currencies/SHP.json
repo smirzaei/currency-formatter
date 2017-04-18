@@ -1,0 +1,7 @@
+{
+  "code": "SHP",
+  "symbol": "£",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

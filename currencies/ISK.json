@@ -1,0 +1,7 @@
+{
+  "code": "ISK",
+  "symbol": "kr.",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 0
+}

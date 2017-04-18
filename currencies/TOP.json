@@ -1,0 +1,7 @@
+{
+  "code": "TOP",
+  "symbol": "T$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

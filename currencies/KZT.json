@@ -1,0 +1,7 @@
+{
+  "code": "KZT",
+  "symbol": "₸",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

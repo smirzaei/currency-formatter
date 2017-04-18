@@ -1,0 +1,7 @@
+{
+  "code": "BZD",
+  "symbol": "BZ$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

@@ -1,0 +1,7 @@
+{
+  "code": "TRY",
+  "symbol": "TL",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

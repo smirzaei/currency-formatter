@@ -1,0 +1,7 @@
+{
+  "code": "GEL",
+  "symbol": "Lari",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

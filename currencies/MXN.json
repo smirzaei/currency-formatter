@@ -1,0 +1,7 @@
+{
+  "code": "MXN",
+  "symbol": "$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

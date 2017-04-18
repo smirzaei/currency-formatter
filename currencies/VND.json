@@ -1,0 +1,7 @@
+{
+  "code": "VND",
+  "symbol": "₫",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 1
+}

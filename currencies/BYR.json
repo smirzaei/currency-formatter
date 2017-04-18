@@ -1,0 +1,7 @@
+{
+  "code": "BYR",
+  "symbol": "р.",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

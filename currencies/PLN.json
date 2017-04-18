@@ -1,0 +1,7 @@
+{
+  "code": "PLN",
+  "symbol": "zł",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

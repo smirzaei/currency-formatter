@@ -1,0 +1,7 @@
+{
+  "code": "ILS",
+  "symbol": "₪",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

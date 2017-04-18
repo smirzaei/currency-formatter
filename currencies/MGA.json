@@ -1,0 +1,7 @@
+{
+  "code": "MGA",
+  "symbol": "Ar",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 0
+}

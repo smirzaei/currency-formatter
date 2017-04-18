@@ -1,0 +1,7 @@
+{
+  "code": "KGS",
+  "symbol": "сом",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

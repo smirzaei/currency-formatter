@@ -1,0 +1,7 @@
+{
+  "code": "PKR",
+  "symbol": "₨",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

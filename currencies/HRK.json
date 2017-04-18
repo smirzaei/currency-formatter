@@ -1,0 +1,7 @@
+{
+  "code": "HRK",
+  "symbol": "kn",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

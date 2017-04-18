@@ -1,0 +1,7 @@
+{
+  "code": "GTQ",
+  "symbol": "Q",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

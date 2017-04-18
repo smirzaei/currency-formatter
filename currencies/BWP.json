@@ -1,0 +1,7 @@
+{
+  "code": "BWP",
+  "symbol": "P",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

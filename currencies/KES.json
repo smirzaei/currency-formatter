@@ -1,0 +1,7 @@
+{
+  "code": "KES",
+  "symbol": "S",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

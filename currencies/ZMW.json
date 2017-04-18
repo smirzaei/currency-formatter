@@ -1,0 +1,7 @@
+{
+  "code": "ZMW",
+  "symbol": "ZK",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

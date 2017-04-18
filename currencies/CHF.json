@@ -1,0 +1,7 @@
+{
+  "code": "CHF",
+  "symbol": "CHF",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

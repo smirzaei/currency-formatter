@@ -1,0 +1,7 @@
+{
+  "code": "RUB",
+  "symbol": "₽",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

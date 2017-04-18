@@ -1,0 +1,7 @@
+{
+  "code": "MMK",
+  "symbol": "K",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

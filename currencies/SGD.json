@@ -1,0 +1,7 @@
+{
+  "code": "SGD",
+  "symbol": "$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

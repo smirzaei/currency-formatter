@@ -1,0 +1,7 @@
+{
+  "code": "HTG",
+  "symbol": "G",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

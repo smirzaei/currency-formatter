@@ -1,0 +1,7 @@
+{
+  "code": "ZAR",
+  "symbol": "R",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

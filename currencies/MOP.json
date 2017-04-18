@@ -1,0 +1,7 @@
+{
+  "code": "MOP",
+  "symbol": "MOP$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

@@ -1,0 +1,7 @@
+{
+  "code": "WST",
+  "symbol": "WS$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

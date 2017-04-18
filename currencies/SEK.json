@@ -1,0 +1,7 @@
+{
+  "code": "SEK",
+  "symbol": "kr",
+  "symbolOnLeft": false,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

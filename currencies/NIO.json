@@ -1,0 +1,7 @@
+{
+  "code": "NIO",
+  "symbol": "C$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

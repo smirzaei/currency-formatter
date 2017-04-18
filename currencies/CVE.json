@@ -1,0 +1,7 @@
+{
+  "code": "CVE",
+  "symbol": "$",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

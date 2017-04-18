@@ -1,0 +1,7 @@
+{
+  "code": "ETB",
+  "symbol": "ETB",
+  "symbolOnLeft": true,
+  "spaceBetweenAmountAndSymbol": false,
+  "decimalDigits": 2
+}

@@ -1,8 +1,5 @@
-// TODO: set default locale
-// TODO: set default currency
 // TODO: #31
-// TODO: WAY more tests
-// TODO: Dynamic loading of currencies (another file perhaps?)
+// TODO: Dynamic loading of currencies
 
 import accounting from 'accounting'
 
@@ -33,8 +30,15 @@ const formatMapping = {
   }
 }
 
-const defaultCurrency = {}
-const defaultLocale = {}
+let defaultCurrency = {}
+export function setCurrency(currency) {
+  defaultCurrency = currency
+}
+
+let defaultLocale = {}
+export function setLocale(locale) {
+  defaultLocale = locale
+}
 
 export function format(value, ...options) {
   const defaultOption = Object.assign({}, defaultCurrency, defaultLocale)

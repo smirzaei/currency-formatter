@@ -8,7 +8,7 @@ import ERN from '../currencies/ERN'
 
 import nl_NL from '../locales/nl-NL'
 
-import { format } from '../src'
+import { format, setCurrency, setLocale } from '../src'
 
 describe('format when', () => {
   context('no default is set', () => {
@@ -171,6 +171,28 @@ describe('format when', () => {
         const result = format(1234.56, EUR, nl_NL)
         result.should.equal('€1.234,56')
       })
+    })
+  })
+
+  context("Default currency is set", () => {
+    before(() => {
+      setCurrency(EUR)
+    })
+
+    it("should use the default to format the number", () => {
+      const result = format(1000000)
+      result.should.equal('1 000 000,00 €')
+    })
+
+    it("should use the default locale if one is set", () => {
+      setLocale(nl_NL)
+      const result = format(1000000)
+      result.should.equal('€1.000.000,00')
+    })
+
+    it("should use the provided curreny if one is set", () => {
+      const result = format(1000000, USD)
+      result.should.equal('$1,000,000.00')
     })
   })
 

@@ -4,39 +4,37 @@
 // TODO: WAY more tests
 // TODO: Dynamic loading of currencies (another file perhaps?)
 
+import accounting from 'accounting'
+
 const formatMapping = {
   'symbolOnLeft': {
     'spaceBetweenAmountAndSymbol': {
-      '1': '%s %v',
-      '-1': '-%s %v',
-      '0': '%s %v',
-      '-0': '%s %v',
+      pos: '%s %v',
+      neg: '-%s %v',
+      zero: '%s %v'
     },
     'noSpaceBetweenAmountAndSymbol': {
-      '1': '%s%v',
-      '-1': '-%s%v',
-      '0': '%s%v',
-      '-0': '%s%v',
+      pos: '%s%v',
+      neg: '-%s%v',
+      zero: '%s%v'
     }
   },
   'symbolOnRight': {
     'spaceBetweenAmountAndSymbol': {
-      '1': '%v %s',
-      '-1': '%v -%s',
-      '0': '%v %s',
-      '-0': '%v %s',
+      pos: '%v %s',
+      neg: '-%v %s',
+      zero: '%v %s'
     },
     'noSpaceBetweenAmountAndSymbol': {
-      '1': '%v%s',
-      '-1': '%v-%s',
-      '0': '%v%s',
-      '-0': '%v%s',
+      pos: '%v%s',
+      neg: '-%v%s',
+      zero: '%v%s'
     }
   }
 }
 
 const defaultCurrency = {}
-const defaultLocale = { localeCode: 'en-US' }
+const defaultLocale = {}
 
 export function format(value, ...options) {
   const defaultOption = Object.assign({}, defaultCurrency, defaultLocale)
@@ -49,15 +47,12 @@ export function format(value, ...options) {
     ? 'symbolOnLeft'
     : 'symbolOnRight'
 
-  const number = new Intl.NumberFormat(formatOption.localeCode, {
-    minimumFractionDigits: formatOption.decimalDigits,
-    maximumFractionDigits: formatOption.decimalDigits
-  }).format(value)
-
-  const formatPatternMapping = formatMapping[symbolOnLeft][spaceBetweenAmountAndSymbol]
-  const formatPattern = formatPatternMapping[Math.sign(value).toString()]
-
-
-  // Is string replace a good idea?
-  return formatPattern.replace('%v', number).replace('%s', formatOption.symbol)
+  const format = formatMapping[symbolOnLeft][spaceBetweenAmountAndSymbol]
+  return accounting.formatMoney(value, {
+    symbol: formatOption.symbol,
+    decimal: formatOption.decimalSeparator,
+    thousand: formatOption.thousandsSeparator,
+    precision: formatOption.decimalDigits,
+    format
+  })
 }

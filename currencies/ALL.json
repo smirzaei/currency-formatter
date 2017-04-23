@@ -1,6 +1,8 @@
 {
   "code": "ALL",
   "symbol": "Lek",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

@@ -1,6 +1,8 @@
 {
   "code": "BAM",
   "symbol": "КМ",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

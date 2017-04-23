@@ -1,6 +1,8 @@
 {
   "code": "PAB",
   "symbol": "B/.",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

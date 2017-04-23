@@ -1,6 +1,8 @@
 {
   "code": "KWD",
   "symbol": "د.ك.‏",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 3

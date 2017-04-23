@@ -1,6 +1,8 @@
 {
   "code": "UZS",
   "symbol": "сўм",
+  "thousandsSeparator": " ",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

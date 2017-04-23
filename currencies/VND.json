@@ -1,6 +1,8 @@
 {
   "code": "VND",
   "symbol": "₫",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 1

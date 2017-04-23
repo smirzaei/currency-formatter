@@ -1,6 +1,8 @@
 {
   "code": "GNF",
   "symbol": "FG",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 0

@@ -1,6 +1,8 @@
 {
   "code": "CHF",
   "symbol": "CHF",
+  "thousandsSeparator": "'",
+  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

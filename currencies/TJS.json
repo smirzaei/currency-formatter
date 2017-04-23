@@ -1,6 +1,8 @@
 {
   "code": "TJS",
   "symbol": "TJS",
+  "thousandsSeparator": " ",
+  "decimalSeparator": ";",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

@@ -1,6 +1,8 @@
 {
   "code": "OMR",
   "symbol": "﷼",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 3

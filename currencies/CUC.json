@@ -1,6 +1,8 @@
 {
   "code": "CUC",
   "symbol": "CUC",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

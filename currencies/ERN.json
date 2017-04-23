@@ -1,6 +1,8 @@
 {
   "code": "ERN",
   "symbol": "Nfk",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

@@ -1,6 +1,8 @@
 {
   "code": "TRY",
   "symbol": "TL",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

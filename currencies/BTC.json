@@ -1,6 +1,8 @@
 {
   "code": "BTC",
   "symbol": "Ƀ",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

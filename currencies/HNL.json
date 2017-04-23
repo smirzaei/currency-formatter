@@ -1,6 +1,8 @@
 {
   "code": "HNL",
   "symbol": "L.",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

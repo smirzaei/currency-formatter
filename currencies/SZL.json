@@ -1,6 +1,8 @@
 {
   "code": "SZL",
   "symbol": "E",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

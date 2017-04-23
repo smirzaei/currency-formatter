@@ -1,6 +1,8 @@
 {
   "code": "TTD",
   "symbol": "TT$",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

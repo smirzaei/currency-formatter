@@ -1,6 +1,8 @@
 {
   "code": "MAD",
   "symbol": "د.م.‏",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

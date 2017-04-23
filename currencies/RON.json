@@ -1,6 +1,8 @@
 {
   "code": "RON",
   "symbol": "lei",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

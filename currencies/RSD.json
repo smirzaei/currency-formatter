@@ -1,6 +1,8 @@
 {
   "code": "RSD",
   "symbol": "Дин.",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

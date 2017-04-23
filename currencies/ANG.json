@@ -1,6 +1,8 @@
 {
   "code": "ANG",
   "symbol": "ƒ",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

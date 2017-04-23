@@ -1,6 +1,8 @@
 {
   "code": "JOD",
   "symbol": "د.ا.‏",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 3

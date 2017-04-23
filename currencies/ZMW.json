@@ -1,6 +1,8 @@
 {
   "code": "ZMW",
   "symbol": "ZK",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

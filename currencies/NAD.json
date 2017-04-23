@@ -1,6 +1,8 @@
 {
   "code": "NAD",
   "symbol": "$",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

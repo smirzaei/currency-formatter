@@ -1,6 +1,8 @@
 {
   "code": "GMD",
   "symbol": "D",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

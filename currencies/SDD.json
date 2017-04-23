@@ -1,6 +1,8 @@
 {
   "code": "SDD",
   "symbol": "LSd",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

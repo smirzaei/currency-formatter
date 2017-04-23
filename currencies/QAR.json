@@ -1,6 +1,8 @@
 {
   "code": "QAR",
   "symbol": "﷼",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

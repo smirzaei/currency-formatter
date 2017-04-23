@@ -1,6 +1,8 @@
 {
   "code": "MYR",
   "symbol": "RM",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

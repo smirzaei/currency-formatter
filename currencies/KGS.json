@@ -1,6 +1,8 @@
 {
   "code": "KGS",
   "symbol": "сом",
+  "thousandsSeparator": " ",
+  "decimalSeparator": "-",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

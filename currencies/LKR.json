@@ -1,6 +1,8 @@
 {
   "code": "LKR",
   "symbol": "₨",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 0

@@ -1,6 +1,8 @@
 {
   "code": "UYU",
   "symbol": "$U",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

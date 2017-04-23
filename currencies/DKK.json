@@ -1,6 +1,8 @@
 {
   "code": "DKK",
   "symbol": "kr.",
+  "thousandsSeparator": "",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

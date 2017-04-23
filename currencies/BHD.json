@@ -1,6 +1,8 @@
 {
   "code": "BHD",
   "symbol": "د.ب.‏",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 3

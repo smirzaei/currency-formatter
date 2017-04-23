@@ -1,6 +1,8 @@
 {
   "code": "TWD",
   "symbol": "NT$",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

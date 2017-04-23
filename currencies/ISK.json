@@ -1,6 +1,8 @@
 {
   "code": "ISK",
   "symbol": "kr.",
+  "thousandsSeparator": ".",
+  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 0

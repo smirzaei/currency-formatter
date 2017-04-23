@@ -1,6 +1,8 @@
 {
   "code": "HTG",
   "symbol": "G",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

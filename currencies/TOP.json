@@ -1,6 +1,8 @@
 {
   "code": "TOP",
   "symbol": "T$",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

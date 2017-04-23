@@ -1,6 +1,8 @@
 {
   "code": "IQD",
   "symbol": "د.ع.‏",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

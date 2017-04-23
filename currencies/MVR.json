@@ -1,6 +1,8 @@
 {
   "code": "MVR",
   "symbol": "MVR",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 1

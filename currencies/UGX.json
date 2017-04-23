@@ -1,6 +1,8 @@
 {
   "code": "UGX",
   "symbol": "USh",
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

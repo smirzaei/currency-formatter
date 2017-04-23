@@ -1,0 +1,7 @@
+{
+  "symbolOnLeft": true,
+  "thousandsSeparator": ",",
+  "decimalSeparator": ".",
+  "spaceBetweenAmountAndSymbol": true,
+  "decimalDigits": 2
+}

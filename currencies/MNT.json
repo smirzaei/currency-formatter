@@ -1,7 +1,7 @@
 {
   "code": "MNT",
   "symbol": "₮",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,

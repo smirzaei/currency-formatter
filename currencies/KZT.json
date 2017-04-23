@@ -1,7 +1,7 @@
 {
   "code": "KZT",
   "symbol": "₸",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": "-",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,

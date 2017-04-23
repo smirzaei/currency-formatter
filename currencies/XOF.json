@@ -1,7 +1,7 @@
 {
   "code": "XOF",
   "symbol": "F",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,

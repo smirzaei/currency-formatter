@@ -1,7 +1,7 @@
 {
   "code": "RWF",
   "symbol": "RWF",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,

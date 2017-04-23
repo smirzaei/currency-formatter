@@ -1,7 +1,7 @@
 {
   "code": "GEL",
   "symbol": "Lari",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,

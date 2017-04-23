@@ -1,7 +1,7 @@
 {
   "code": "BYR",
   "symbol": "р.",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,

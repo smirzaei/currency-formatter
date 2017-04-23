@@ -1,7 +1,7 @@
 {
   "code": "TMT",
   "symbol": "m",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,

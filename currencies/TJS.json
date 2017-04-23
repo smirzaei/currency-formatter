@@ -1,7 +1,7 @@
 {
   "code": "TJS",
   "symbol": "TJS",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ";",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,

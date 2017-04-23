@@ -1,7 +1,7 @@
 {
   "code": "NOK",
   "symbol": "kr",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,

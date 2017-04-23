@@ -1,7 +1,7 @@
 {
   "code": "PLN",
   "symbol": "zł",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,

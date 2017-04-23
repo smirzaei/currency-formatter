@@ -1,7 +1,7 @@
 {
   "code": "HUF",
   "symbol": "Ft",
-  "thousandsSeparator": " ",
+  "thousandsSeparator": " ",
   "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,

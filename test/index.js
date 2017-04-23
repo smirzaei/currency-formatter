@@ -5,6 +5,9 @@ import USD from '../currencies/USD'
 import EUR from '../currencies/EUR'
 import ARS from '../currencies/ARS'
 import ERN from '../currencies/ERN'
+
+import nl_NL from '../locales/nl-NL'
+
 import { format } from '../src'
 
 describe('format when', () => {
@@ -161,6 +164,52 @@ describe('format when', () => {
           result.should.equal('10 000,00 €')
         })
       })
+    })
+
+    context("Locale should override currency options", () => {
+      it("should return €1.234,56 for nl-NL", () => {
+        const result = format(1234.56, EUR, nl_NL)
+        result.should.equal('€1.234,56')
+      })
+    })
+  })
+
+  context("Overrides", () => {
+    it("should allow overrides", () => {
+      const result = format(1000000, USD, {
+        symbol: '@',
+        decimalSeparator: '*',
+        thousandsSeparator: '^',
+        decimalDigits: 4,
+        symbolOnLeft: false,
+        spaceBetweenAmountAndSymbol: true
+      })
+
+      result.should.equal('1^000^000*0000 @')
+    })
+
+    it("should allow empty symbol", () => {
+      const result = format(1000000, USD, {
+        symbol: ''
+      })
+
+      result.should.equal('1,000,000.00')
+    })
+
+    it("should allow empty thousands separator", () => {
+      const result = format(1000000, USD, {
+        thousandsSeparator: ''
+      })
+
+      result.should.equal('$1000000.00')
+    })
+
+    it("should allow 0 decimal digits", () => {
+      const result = format(1000000, USD, {
+        decimalDigits: 0
+      })
+
+      result.should.equal('$1,000,000')
     })
   })
 })

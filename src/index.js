@@ -42,7 +42,7 @@ export function setLocale(locale) {
 
 export function format(value, ...options) {
   const defaultOption = Object.assign({}, defaultCurrency, defaultLocale)
-  const formatOption = options.reduce((p, c) => Object.assign(p, c), defaultOption)
+  const formatOption = Object.assign(defaultOption, ...options)
   const spaceBetweenAmountAndSymbol = formatOption.spaceBetweenAmountAndSymbol
     ? 'spaceBetweenAmountAndSymbol'
     : 'noSpaceBetweenAmountAndSymbol'

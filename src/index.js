@@ -1,31 +1,33 @@
 // TODO: #31
 // TODO: Dynamic loading of currencies
 
-import accounting from 'accounting'
-
 const formatMapping = {
   'symbolOnLeft': {
-    'spaceBetweenAmountAndSymbol': {
-      pos: '%s %v',
-      neg: '-%s %v',
-      zero: '%s %v'
+    'spaceBetweenAmountAndSymbol': { // Beware, spaces in template literals are non-breaking
+      '1': (v, s) => `${s} ${v}`,
+      '-1': (v, s) => `-${s} ${v}`,
+      '0': (v, s) => `${s} ${v}`,
+      '-0': (v, s) => `${s} ${v}`,
     },
     'noSpaceBetweenAmountAndSymbol': {
-      pos: '%s%v',
-      neg: '-%s%v',
-      zero: '%s%v'
+      '1': (v, s) => `${s}${v}`,
+      '-1': (v, s) => `-${s}${v}`,
+      '0': (v, s) => `${s}${v}`,
+      '-0': (v, s) => `${s}${v}`,
     }
   },
   'symbolOnRight': {
-    'spaceBetweenAmountAndSymbol': {
-      pos: '%v %s',
-      neg: '-%v %s',
-      zero: '%v %s'
+    'spaceBetweenAmountAndSymbol': { // Beware, spaces in template literals are non-breaking
+      '1': (v, s) => `${v} ${s}`,
+      '-1': (v, s) => `-${v} ${s}`,
+      '0': (v, s) => `${v} ${s}`,
+      '-0': (v, s) => `${v} ${s}`,
     },
     'noSpaceBetweenAmountAndSymbol': {
-      pos: '%v%s',
-      neg: '-%v%s',
-      zero: '%v%s'
+      '1': (v, s) => `${v}${s}`,
+      '-1': (v, s) => `-${v}${s}`,
+      '0': (v, s) => `${v}${s}`,
+      '-0': (v, s) => `${v}${s}`,
     }
   }
 }
@@ -51,12 +53,13 @@ export function format(value, ...options) {
     ? 'symbolOnLeft'
     : 'symbolOnRight'
 
-  const format = formatMapping[symbolOnLeft][spaceBetweenAmountAndSymbol]
-  return accounting.formatMoney(value, {
-    symbol: formatOption.symbol,
-    decimal: formatOption.decimalSeparator,
-    thousand: formatOption.thousandsSeparator,
-    precision: formatOption.decimalDigits,
-    format
-  })
+  const formattedValue = new Intl.NumberFormat(formatOption.localeCode, {
+    minimumFractionDigits: formatOption.decimalDigits,
+    maximumFractionDigits: formatOption.decimalDigits
+  }).format(Math.abs(value))
+
+  const formatPatternMapping = formatMapping[symbolOnLeft][spaceBetweenAmountAndSymbol]
+  const formatPattern = formatPatternMapping[Math.sign(value).toString()]
+
+  return formatPattern(formattedValue, formatOption.symbol)
 }

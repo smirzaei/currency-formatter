@@ -1,8 +1,6 @@
 {
   "code": "BIF",
   "symbol": "FBu",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 0

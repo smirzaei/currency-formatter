@@ -1,8 +1,6 @@
 {
   "code": "IDR",
   "symbol": "Rp",
-  "thousandsSeparator": ".",
-  "decimalSeparator": ",",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 0

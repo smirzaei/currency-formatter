@@ -1,8 +1,6 @@
 {
   "code": "SOS",
   "symbol": "S",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

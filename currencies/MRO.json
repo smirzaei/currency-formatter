@@ -1,8 +1,6 @@
 {
   "code": "MRO",
   "symbol": "UM",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

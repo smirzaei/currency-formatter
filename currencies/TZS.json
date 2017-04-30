@@ -1,8 +1,6 @@
 {
   "code": "TZS",
   "symbol": "TSh",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

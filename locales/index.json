@@ -1,51 +1,44 @@
 {
   "de-AT": {
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
+    "localeCode": "de-AT",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
   "el-GR": {
+    "localeCode": "el-GR",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
     "decimalDigits": 2
   },
   "en-IE": {
+    "localeCode": "en-IE",
     "symbolOnLeft": true,
-    "thousandsSeparator": ",",
-    "decimalSeparator": ".",
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
   "es-ES": {
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
+    "localeCode": "es-ES",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
   "it-IT": {
+    "localeCode": "it-IT",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
     "decimalDigits": 2
   },
   "nl-BE": {
+    "localeCode": "nl-BE",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
     "decimalDigits": 2
   },
   "nl-NL": {
+    "localeCode": "nl-NL",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
     "decimalDigits": 2
   }
 }

@@ -1,8 +1,6 @@
 {
   "code": "BRL",
   "symbol": "R$",
-  "thousandsSeparator": ".",
-  "decimalSeparator": ",",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

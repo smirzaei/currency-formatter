@@ -1,8 +1,6 @@
 {
   "code": "BGN",
   "symbol": "лв.",
-  "thousandsSeparator": " ",
-  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

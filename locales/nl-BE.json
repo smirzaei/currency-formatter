@@ -1,7 +1,6 @@
 {
+  "localeCode": "nl-BE",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
-  "thousandsSeparator": ".",
-  "decimalSeparator": ",",
   "decimalDigits": 2
 }

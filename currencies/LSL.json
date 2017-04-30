@@ -1,8 +1,6 @@
 {
   "code": "LSL",
   "symbol": "M",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

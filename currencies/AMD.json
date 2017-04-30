@@ -1,8 +1,6 @@
 {
   "code": "AMD",
   "symbol": "֏",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

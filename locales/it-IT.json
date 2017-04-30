@@ -1,7 +1,6 @@
 {
+  "localeCode": "it-IT",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
-  "thousandsSeparator": ".",
-  "decimalSeparator": ",",
   "decimalDigits": 2
 }

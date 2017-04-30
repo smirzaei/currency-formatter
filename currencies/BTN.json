@@ -1,8 +1,6 @@
 {
   "code": "BTN",
   "symbol": "Nu.",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 1

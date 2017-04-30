@@ -1,8 +1,6 @@
 {
   "code": "VUV",
   "symbol": "VT",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 0

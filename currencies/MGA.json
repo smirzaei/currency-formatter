@@ -1,8 +1,6 @@
 {
   "code": "MGA",
   "symbol": "Ar",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 0

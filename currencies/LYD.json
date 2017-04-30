@@ -1,8 +1,6 @@
 {
   "code": "LYD",
   "symbol": "د.ل.‏",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 3

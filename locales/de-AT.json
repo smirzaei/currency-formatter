@@ -1,6 +1,5 @@
 {
-  "thousandsSeparator": ".",
-  "decimalSeparator": ",",
+  "localeCode": "de-AT",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

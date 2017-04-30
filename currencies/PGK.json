@@ -1,8 +1,6 @@
 {
   "code": "PGK",
   "symbol": "K",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

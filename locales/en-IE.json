@@ -1,7 +1,6 @@
 {
+  "localeCode": "en-IE",
   "symbolOnLeft": true,
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2
 }

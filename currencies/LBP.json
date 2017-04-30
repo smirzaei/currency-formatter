@@ -1,8 +1,6 @@
 {
   "code": "LBP",
   "symbol": "ل.ل.‏",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

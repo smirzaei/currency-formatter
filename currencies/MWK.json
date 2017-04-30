@@ -1,8 +1,6 @@
 {
   "code": "MWK",
   "symbol": "MK",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

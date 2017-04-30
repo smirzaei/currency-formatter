@@ -1,8 +1,6 @@
 {
   "code": "DOP",
   "symbol": "RD$",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

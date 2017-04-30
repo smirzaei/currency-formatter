@@ -1,8 +1,6 @@
 {
   "code": "AED",
   "symbol": "د.إ.‏",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

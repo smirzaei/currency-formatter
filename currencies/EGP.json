@@ -1,8 +1,6 @@
 {
   "code": "EGP",
   "symbol": "ج.م.‏",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 2

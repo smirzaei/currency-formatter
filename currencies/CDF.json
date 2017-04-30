@@ -1,8 +1,6 @@
 {
   "code": "CDF",
   "symbol": "FC",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

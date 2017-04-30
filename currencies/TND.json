@@ -1,8 +1,6 @@
 {
   "code": "TND",
   "symbol": "د.ت.‏",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": true,
   "decimalDigits": 3

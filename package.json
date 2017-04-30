@@ -4,6 +4,7 @@
   "description": "A simple Javascript utility that helps you to display currency properly",
   "main": "index.js",
   "scripts": {
+    "generate-aggregates": "node ./bin/generate_files.js",
     "test": "NODE_ENV=test mocha ./test/index.js --compilers js:babel-core/register"
   },
   "repository": {

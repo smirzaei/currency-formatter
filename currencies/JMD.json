@@ -1,8 +1,6 @@
 {
   "code": "JMD",
   "symbol": "J$",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

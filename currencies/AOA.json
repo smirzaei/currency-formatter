@@ -1,8 +1,6 @@
 {
   "code": "AOA",
   "symbol": "Kz",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": true,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

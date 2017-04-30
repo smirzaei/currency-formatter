@@ -1,8 +1,6 @@
 {
   "code": "KMF",
   "symbol": "CF",
-  "thousandsSeparator": ",",
-  "decimalSeparator": ".",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

@@ -1,8 +1,6 @@
 {
   "code": "UAH",
   "symbol": "₴",
-  "thousandsSeparator": " ",
-  "decimalSeparator": ",",
   "symbolOnLeft": false,
   "spaceBetweenAmountAndSymbol": false,
   "decimalDigits": 2

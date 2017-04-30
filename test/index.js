@@ -12,7 +12,7 @@ import nl_NL from '../locales/nl-NL'
 // Polyfill the Intl object, because Node only contains English locale data
 Intl.NumberFormat = IntlPolyfill.NumberFormat;
 
-import { format, setCurrency, setLocale } from '../src'
+import { format, setCurrency, setLocale, setOverrides } from '../src'
 
 describe('format when', () => {
   context('no default is set', () => {
@@ -97,7 +97,7 @@ describe('format when', () => {
         })
       })
 
-      // Symbol righr - no space
+      // Symbol right - no space
       context('for ERN', () => {
         it('should return -1.00Nfk for -1', () => {
           const result = format(-1, ERN)
@@ -137,8 +137,8 @@ describe('format when', () => {
 
       // Symbol right - with space
       context('for EUR', () => {
-	      before(() => setLocale({ localeCode: 'de-DE' }))
-	      after(() => setLocale({}))
+        before(() => setLocale({ localeCode: 'de-DE' }))
+        after(() => setLocale({}))
         
         it('should return -1,00 € for -1', () => {
           const result = format(-1, EUR)
@@ -225,6 +225,19 @@ describe('format when', () => {
 
       result.should.equal('1,000,000.0000 @')
     })
+    
+    it("should allow globally setting default overrides", () => {
+      setCurrency(USD);
+      setOverrides({
+        symbol: '@'
+      });
+      const result = format(1000000)
+      result.should.equal('@1,000,000.00')
+
+      // cleanup
+      setCurrency({});
+      setOverrides({})
+    });
 
     it("should allow empty symbol", () => {
       const result = format(1000000, USD, {
@@ -249,5 +262,24 @@ describe('format when', () => {
 
       result.should.equal('$1,000,000')
     })
+    
+    context("omitZeroDecimals", () => {
+      it("should render $123 for 123", () => {
+        const result = format(123, USD, { omitZeroDecimals: true });
+        result.should.equal("$123");
+      })
+      
+      it("should render -$123 for -123", () => {
+        const result = format(-123, USD, { omitZeroDecimals: true });
+        result.should.equal("-$123");
+      })
+      
+      it("should render $123.45 for 123.45", () => {
+        const result = format(123.45, USD, { omitZeroDecimals: true });
+        result.should.equal("$123.45");
+      })
+      
+    })
+    
   })
 })

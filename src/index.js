@@ -1,4 +1,3 @@
-// TODO: #31
 // TODO: Dynamic loading of currencies
 
 const formatMapping = {
@@ -42,8 +41,13 @@ export function setLocale(locale) {
   defaultLocale = locale
 }
 
+let defaultOverrides = {}
+export function setOverrides(overrides) {
+  defaultOverrides = overrides;
+}
+
 export function format(value, ...options) {
-  const defaultOption = Object.assign({}, defaultCurrency, defaultLocale)
+  const defaultOption = Object.assign({}, defaultCurrency, defaultLocale, defaultOverrides)
   const formatOption = Object.assign(defaultOption, ...options)
   const spaceBetweenAmountAndSymbol = formatOption.spaceBetweenAmountAndSymbol
     ? 'spaceBetweenAmountAndSymbol'
@@ -52,10 +56,14 @@ export function format(value, ...options) {
   const symbolOnLeft = formatOption.symbolOnLeft
     ? 'symbolOnLeft'
     : 'symbolOnRight'
+  
+  const decimalDigits = (formatOption.omitZeroDecimals && (value % 1 === 0))
+    ? 0
+    : formatOption.decimalDigits
 
   const formattedValue = new Intl.NumberFormat(formatOption.localeCode, {
-    minimumFractionDigits: formatOption.decimalDigits,
-    maximumFractionDigits: formatOption.decimalDigits
+    minimumFractionDigits: decimalDigits,
+    maximumFractionDigits: decimalDigits
   }).format(Math.abs(value))
 
   const formatPatternMapping = formatMapping[symbolOnLeft][spaceBetweenAmountAndSymbol]

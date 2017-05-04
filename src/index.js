@@ -1,5 +1,4 @@
 // TODO: #31
-// TODO: Dynamic loading of currencies
 
 import accounting from 'accounting'
 
@@ -30,19 +29,8 @@ const formatMapping = {
   }
 }
 
-let defaultCurrency = {}
-export function setCurrency(currency) {
-  defaultCurrency = currency
-}
-
-let defaultLocale = {}
-export function setLocale(locale) {
-  defaultLocale = locale
-}
-
 export function format(value, ...options) {
-  const defaultOption = Object.assign({}, defaultCurrency, defaultLocale)
-  const formatOption = options.reduce((p, c) => Object.assign(p, c), defaultOption)
+  const formatOption = options.reduce((p, c) => Object.assign(p, c), {})
   const spaceBetweenAmountAndSymbol = formatOption.spaceBetweenAmountAndSymbol
     ? 'spaceBetweenAmountAndSymbol'
     : 'noSpaceBetweenAmountAndSymbol'

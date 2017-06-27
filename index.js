@@ -58,7 +58,7 @@ function format(value, options) {
   var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
   var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
   var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
-  
+
   var symbolOnLeft = currency.symbolOnLeft
   var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
 
@@ -106,5 +106,6 @@ module.exports = {
     })
   },
   findCurrency: findCurrency,
-  format: format
+  format: format,
+  unformat: accounting.unformat
 }

@@ -156,13 +156,13 @@ describe('format', () => {
       })
     })
   })
-  
+
   context('With locale option', () => {
     it('Returns €1.234,56 for nl-NL', () => {
       var result = currencyFormatter.format(1234.56, {
         locale: 'nl-NL'
       })
-      
+
       assert.equal(result, '€1.234,56')
     })
 
@@ -326,5 +326,20 @@ describe('findCurrency', () => {
   it('returns undefined when it can\'t find the currency', () => {
     var result = currencyFormatter.findCurrency('NON EXISTING')
     assert.isUndefined(result)
+  })
+
+  describe('unformat', () => {
+    it('returns a normal number', () => {
+      var originNumber = 12345;
+      var formattedNumber = currencyFormatter.format(originNumber, { code: 'USD'})
+      var result = currencyFormatter.unformat(formattedNumber)
+      assert.equal(result, originNumber, 'unformat value not equal to original value')
+    })
+    it('returns a integer number', () => {
+      var originNumber = 12345;
+      var formattedNumber = currencyFormatter.format(originNumber, { code: 'USD'})
+      var result = currencyFormatter.unformat(formattedNumber)
+      assert.equal(`${result}`, `${originNumber}`, 'unformat value is float')
+    })
   })
 })

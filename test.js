@@ -328,3 +328,13 @@ describe('findCurrency', () => {
     assert.isUndefined(result)
   })
 })
+
+describe('parseCurrency', () => {
+  it('returns amount as float', () => {
+    assert.deepEqual(currencyFormatter.unformat('1.000,99', { locale: 'de-DE' }), 1000.99)
+    assert.deepEqual(currencyFormatter.unformat('10\'000 CHF', { code: 'CHF' }), 10000)
+    assert.deepEqual(currencyFormatter.unformat('10.00 CHF', { code: 'CHF' }), 10)
+    assert.deepEqual(currencyFormatter.unformat('10,00 CHF', { code: 'CHF' }), 1000)
+    assert.deepEqual(currencyFormatter.unformat('10,00 CHF', { code: 'CHF', decimal: ',' }), 10)
+  })
+})

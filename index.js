@@ -97,6 +97,14 @@ function isUndefined (val) {
   return typeof val === 'undefined'
 }
 
+function unformat(value, options) {
+  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
+  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
+  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
+  var decimal = isUndefined(options.decimal) ? currency.decimalSeparator : options.decimal
+  return accounting.unformat(value, decimal)
+}
+
 module.exports = {
   defaultCurrency: defaultCurrency,
   get currencies() {
@@ -106,5 +114,6 @@ module.exports = {
     })
   },
   findCurrency: findCurrency,
-  format: format
+  format: format,
+  unformat: unformat
 }

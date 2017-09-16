@@ -68,6 +68,36 @@ currencyFormatter.findCurrency('USD');
 
 ```
 
+Parse the number of a monetary value
+
+```js
+
+currencyFormatter.unformat('$10.5', { code: 'USD' })
+// => 10.5
+
+currencyFormatter.unformat('$1,000,000', { code: 'USD' })
+// => 1000000
+
+currencyFormatter.unformat('10,5 €', { code: 'EUR' })
+// => 10.5
+
+currencyFormatter.unformat('1 000 000,00 €', { code: 'EUR' })
+// => 1000000
+
+currencyFormatter.unformat('1.000,99', { locale: 'de-DE' })
+// => 1000.99
+
+currencyFormatter.unformat('10\'000 CHF', { code: 'CHF' })
+// => 10000
+
+currencyFormatter.unformat('10.00 CHF', { code: 'CHF' })
+// => 10
+
+currencyFormatter.unformat('10,00 CHF', { code: 'CHF' })
+// => 1000
+
+```
+
 Advanced Usage
 =
 Currency Formatter uses [accounting](https://github.com/openexchangerates/accounting.js) library under the hood, and you can use its options to override the default behavior.

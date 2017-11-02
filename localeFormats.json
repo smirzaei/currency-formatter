@@ -47,5 +47,12 @@
     "thousandsSeparator": ".",
     "decimalSeparator": ",",
     "decimalDigits": 2
+  },
+  "de-DE": {
+    "symbolOnLeft": false,
+    "spaceBetweenAmountAndSymbol": true,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
   }
 }

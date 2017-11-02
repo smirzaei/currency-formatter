@@ -156,14 +156,22 @@ describe('format', () => {
       })
     })
   })
-  
+
   context('With locale option', () => {
     it('Returns €1.234,56 for nl-NL', () => {
       var result = currencyFormatter.format(1234.56, {
         locale: 'nl-NL'
       })
-      
+
       assert.equal(result, '€1.234,56')
+    })
+
+    it('Returns 1.000.000,00 € for de-DE', () => {
+      var result = currencyFormatter.format(1000000, {
+        locale: 'de-DE'
+      })
+
+      assert.equal(result, '1.000.000,00 €')
     })
 
     it('Allows for overriding with options', () => {

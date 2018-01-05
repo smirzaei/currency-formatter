@@ -622,7 +622,7 @@
   },
   "KES": {
     "code": "KES",
-    "symbol": "S",
+    "symbol": "KSh",
     "thousandsSeparator": ",",
     "decimalSeparator": ".",
     "symbolOnLeft": true,

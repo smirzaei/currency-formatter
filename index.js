@@ -61,7 +61,7 @@ function format(value, options) {
   var region = localeMatch[3]
   var localeFormat = assign({}, defaultLocaleFormat,
                             localeFormats[language] || {},
-                            localeFormats[`${language}-${region}`] || {})
+                            localeFormats[language + '-' + region] || {})
   var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
   
   var symbolOnLeft = currency.symbolOnLeft

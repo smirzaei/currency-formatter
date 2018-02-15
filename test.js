@@ -158,9 +158,25 @@ describe('format', () => {
   })
 
   context('With locale option', () => {
+    it('Returns 1 234,56 € for fi', () => {
+      var result = currencyFormatter.format(1234.56, {
+        locale: 'fi'
+      })
+
+      assert.equal(result, '1 234,56 €')
+    })
+
     it('Returns €1.234,56 for nl-NL', () => {
       var result = currencyFormatter.format(1234.56, {
         locale: 'nl-NL'
+      })
+
+      assert.equal(result, '€1.234,56')
+    })
+
+    it('Returns €1.234,56 for nl', () => {
+      var result = currencyFormatter.format(1234.56, {
+        locale: 'nl'
       })
 
       assert.equal(result, '€1.234,56')

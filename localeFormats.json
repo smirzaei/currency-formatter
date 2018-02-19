@@ -1,12 +1,12 @@
 {
-  "de-AT": {
+  "de": {
     "thousandsSeparator": ".",
     "decimalSeparator": ",",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
-  "el-GR": {
+  "el": {
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
     "thousandsSeparator": ".",
@@ -20,37 +20,23 @@
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
-  "es-ES": {
+  "es": {
     "thousandsSeparator": ".",
     "decimalSeparator": ",",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
-  "it-IT": {
+  "it": {
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
     "thousandsSeparator": ".",
     "decimalSeparator": ",",
     "decimalDigits": 2
   },
-  "nl-NL": {
+  "nl": {
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
-    "decimalDigits": 2
-  },
-  "nl-BE": {
-    "symbolOnLeft": true,
-    "spaceBetweenAmountAndSymbol": false,
-    "thousandsSeparator": ".",
-    "decimalSeparator": ",",
-    "decimalDigits": 2
-  },
-  "de-DE": {
-    "symbolOnLeft": false,
-    "spaceBetweenAmountAndSymbol": true,
     "thousandsSeparator": ".",
     "decimalSeparator": ",",
     "decimalDigits": 2

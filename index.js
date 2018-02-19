@@ -56,7 +56,12 @@ var formatMapping = [
 
 function format(value, options) {
   var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
-  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
+  var localeMatch = /^([a-z]+)([_-]([a-z]+))?$/i.exec(options.locale) || []
+  var language = localeMatch[1]
+  var region = localeMatch[3]
+  var localeFormat = assign({}, defaultLocaleFormat,
+                            localeFormats[language] || {},
+                            localeFormats[language + '-' + region] || {})
   var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
   
   var symbolOnLeft = currency.symbolOnLeft

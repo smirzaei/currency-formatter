@@ -1394,6 +1394,15 @@
     "spaceBetweenAmountAndSymbol": false,
     "decimalDigits": 2
   },
+  "XBT": {
+    "code": "XBT",
+    "symbol": "Ƀ",
+    "thousandsSeparator": ",",
+    "decimalSeparator": ".",
+    "symbolOnLeft": false,
+    "spaceBetweenAmountAndSymbol": false,
+    "decimalDigits": 2
+  },
   "XOF": {
     "code": "XOF",
     "symbol": "F",

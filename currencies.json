@@ -195,7 +195,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 2
+    "decimalDigits": 8
   },
   "BTN": {
     "code": "BTN",

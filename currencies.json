@@ -253,7 +253,7 @@
   },
   "CHF": {
     "code": "CHF",
-    "symbol": "CHF",
+    "symbol": "Fr",
     "thousandsSeparator": "'",
     "decimalSeparator": ".",
     "symbolOnLeft": false,

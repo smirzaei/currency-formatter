@@ -256,7 +256,7 @@
     "symbol": "Fr",
     "thousandsSeparator": "'",
     "decimalSeparator": ".",
-    "symbolOnLeft": false,
+    "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },

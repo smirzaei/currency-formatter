@@ -22,12 +22,12 @@
   },
   "homepage": "https://github.com/smirzaei/currency-formatter#readme",
   "devDependencies": {
-    "chai": "^3.3.0",
-    "mocha": "^2.3.3"
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
     "accounting": "^0.4.1",
-    "locale-currency": "0.0.1",
+    "locale-currency": "0.0.2",
     "object-assign": "^4.1.1"
   }
 }

@@ -13,6 +13,13 @@
     "decimalSeparator": ",",
     "decimalDigits": 2
   },
+  "en-US": {
+    "thousandsSeparator": ",",
+    "decimalSeparator": ".",
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "decimalDigits": 2
+  },
   "en-IE": {
     "symbolOnLeft": true,
     "thousandsSeparator": ",",

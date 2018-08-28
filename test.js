@@ -207,6 +207,15 @@ describe('format', () => {
 
       assert.equal(result, '$1.234,56')
     });
+
+    it('returns €1,000,000.00 for en-US locale', () => {
+      var result = currencyFormatter.format(1000000, {
+        locale: 'en-US',
+        code: 'EUR'
+      });
+
+      assert.equal(result, '€1,000,000.00');
+    })
   })
 
   context('Overriding Options', () => {

@@ -27,6 +27,13 @@
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
+  "zh-CN": {
+    "thousandsSeparator": ",",
+    "decimalSeparator": ".",
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "decimalDigits": 2
+  },
   "es": {
     "thousandsSeparator": ".",
     "decimalSeparator": ",",

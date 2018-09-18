@@ -1286,7 +1286,7 @@
 	    thousandsSeparator: ",",
 	    decimalSeparator: ".",
 	    symbolOnLeft: true,
-	    spaceBetweenAmountAndSymbol: false,
+	    spaceBetweenAmountAndSymbol: true,
 	    decimalDigits: 2
 	  },
 	  HNL: {
@@ -1907,7 +1907,7 @@
 	    thousandsSeparator: ",",
 	    decimalSeparator: ".",
 	    symbolOnLeft: true,
-	    spaceBetweenAmountAndSymbol: false,
+	    spaceBetweenAmountAndSymbol: true,
 	    decimalDigits: 2
 	  },
 	  SHP: {

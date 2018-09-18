@@ -502,7 +502,7 @@ var currencies = {
 		thousandsSeparator: ",",
 		decimalSeparator: ".",
 		symbolOnLeft: true,
-		spaceBetweenAmountAndSymbol: false,
+		spaceBetweenAmountAndSymbol: true,
 		decimalDigits: 2
 	},
 	HNL: {
@@ -1123,7 +1123,7 @@ var currencies = {
 		thousandsSeparator: ",",
 		decimalSeparator: ".",
 		symbolOnLeft: true,
-		spaceBetweenAmountAndSymbol: false,
+		spaceBetweenAmountAndSymbol: true,
 		decimalDigits: 2
 	},
 	SHP: {

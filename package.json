@@ -2,9 +2,11 @@
   "name": "currency-formatter",
   "version": "1.5.1",
   "description": "A simple Javascript utility that helps you to display currency properly",
-  "main": "index.js",
+  "main": "dist/js/currencyFormatter.js",
+  "module": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha ./test.js --harmony"
+    "test": "NODE_ENV=test mocha ./test.js --harmony",
+    "build": "rollup -c"
   },
   "repository": {
     "type": "git",
@@ -22,8 +24,16 @@
   },
   "homepage": "https://github.com/smirzaei/currency-formatter#readme",
   "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "babel-preset-env": "^7.0.0-beta.3",
     "chai": "^4.1.2",
-    "mocha": "^5.2.0"
+    "mocha": "^5.2.0",
+    "rollup": "^0.66.0",
+    "rollup-plugin-babel": "^4.0.3",
+    "rollup-plugin-commonjs": "^9.1.8",
+    "rollup-plugin-json": "^3.1.0",
+    "rollup-plugin-node-resolve": "^3.4.0",
+    "rollup-plugin-uglify": "^6.0.0"
   },
   "dependencies": {
     "accounting": "^0.4.1",

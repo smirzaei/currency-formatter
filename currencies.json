@@ -1353,10 +1353,10 @@
     "code": "VND",
     "symbol": "₫",
     "thousandsSeparator": ".",
-    "decimalSeparator": ",",
+    "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 1
+    "decimalDigits": 3
   },
   "VUV": {
     "code": "VUV",

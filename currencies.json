@@ -1352,8 +1352,8 @@
   "VND": {
     "code": "VND",
     "symbol": "₫",
-    "thousandsSeparator": ",",
-    "decimalSeparator": ".",
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2

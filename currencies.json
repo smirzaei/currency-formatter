@@ -1352,11 +1352,11 @@
   "VND": {
     "code": "VND",
     "symbol": "₫",
-    "thousandsSeparator": ".",
+    "thousandsSeparator": ",",
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 3
+    "decimalDigits": 2
   },
   "VUV": {
     "code": "VUV",

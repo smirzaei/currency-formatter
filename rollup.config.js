@@ -3,6 +3,7 @@ import commonjs from "rollup-plugin-commonjs";
 import babel from "rollup-plugin-babel";
 import { uglify } from "rollup-plugin-uglify";
 import json from "rollup-plugin-json";
+import cleanup from "rollup-plugin-cleanup";
 
 export default [
     {
@@ -39,7 +40,6 @@ export default [
             file: "dist/js/currencyFormatter.js",
             format: "umd",
             name: "currencyFormatter",
-            sourcemap: true,
             exports: "named"
         },
         plugins: [
@@ -51,7 +51,8 @@ export default [
             commonjs(),
             babel({
                 exclude: "node_modules/**"
-            })
+            }),
+            cleanup()
         ]
     },
     {

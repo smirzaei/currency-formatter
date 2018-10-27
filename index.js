@@ -1,8 +1,8 @@
-var accounting = require('accounting')
-var assign = require('object-assign')
-var localeCurrency = require('locale-currency')
-var currencies = require('./json/currencies')
-var localeFormats = require('./json/localeFormats')
+import accounting from 'accounting';
+import assign from 'object-assign';
+import localeCurrency from 'locale-currency';
+import curr from './json/currencies';
+import localeFormats from './json/localeFormats';
 
 var defaultCurrency = {
   symbol: '',
@@ -11,9 +11,9 @@ var defaultCurrency = {
   symbolOnLeft: true,
   spaceBetweenAmountAndSymbol: false,
   decimalDigits: 2
-}
+};
 
-var defaultLocaleFormat = {}
+var defaultLocaleFormat = {};
 
 var formatMapping = [
   {
@@ -52,24 +52,24 @@ var formatMapping = [
       zero: '%v %s'
     }
   }
-]
+];
 
 function format(value, options) {
-  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
-  var localeMatch = /^([a-z]+)([_-]([a-z]+))?$/i.exec(options.locale) || []
-  var language = localeMatch[1]
-  var region = localeMatch[3]
+  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
+  var localeMatch = /^([a-z]+)([_-]([a-z]+))?$/i.exec(options.locale) || [];
+  var language = localeMatch[1];
+  var region = localeMatch[3];
   var localeFormat = assign({}, defaultLocaleFormat,
     localeFormats[language] || {},
-    localeFormats[language + '-' + region] || {})
-  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
+    localeFormats[language + '-' + region] || {});
+  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat);
 
-  var symbolOnLeft = currency.symbolOnLeft
-  var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
+  var symbolOnLeft = currency.symbolOnLeft;
+  var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
 
   var format = formatMapping.filter(function (f) {
     return f.symbolOnLeft == symbolOnLeft && f.spaceBetweenAmountAndSymbol == spaceBetweenAmountAndSymbol
-  })[0].format
+  })[0].format;
 
   return accounting.formatMoney(value, {
     symbol: isUndefined(options.symbol)
@@ -91,34 +91,36 @@ function format(value, options) {
     format: ['string', 'object'].indexOf(typeof options.format) > -1
       ? options.format
       : format
-  })
+  });
 }
 
 function findCurrency(currencyCode) {
-  return currencies[currencyCode]
+  return curr[currencyCode];
 }
 
 function isUndefined(val) {
-  return typeof val === 'undefined'
+  return (typeof val === 'undefined');
 }
 
 function unformat(value, options) {
-  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
-  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
-  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
-  var decimal = isUndefined(options.decimal) ? currency.decimalSeparator : options.decimal
-  return accounting.unformat(value, decimal)
+  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
+  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat;
+  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat);
+  var decimal = isUndefined(options.decimal) ? currency.decimalSeparator : options.decimal;
+  return accounting.unformat(value, decimal);
 }
 
-module.exports = {
-  defaultCurrency: defaultCurrency,
-  get currencies() {
-    // In favor of backwards compatibility, the currencies map is converted to an array here
-    return Object.keys(currencies).map(function (key) {
-      return currencies[key]
-    })
-  },
-  findCurrency: findCurrency,
-  format: format,
-  unformat: unformat
+var currencies = function () {
+  return Object.keys(curr).map(function (key) {
+    return curr[key];
+  });
+};;
+
+export {
+  defaultCurrency,
+  currencies,
+  findCurrency,
+  localeCurrency,
+  format,
+  unformat
 };

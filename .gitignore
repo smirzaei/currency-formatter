@@ -94,3 +94,6 @@ $RECYCLE.BIN/
 
 # IntelliJ Idea
 .idea
+
+json/currencies.js
+json/localeFormats.js

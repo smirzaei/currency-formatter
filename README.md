@@ -1,6 +1,6 @@
 # UniFormat
 
-A universal Javascript utility that helps you to display currency properly. It is based on <a href="https://github.com/smirzaei/currency-formatter">Smirzaei's</a> currency-formatter. The original library was created for node js and module bundlers only. This library is exported as UMD, which means you can use it in anyway you like. Since the original library was created a long time ago, this may still have few issues. Please feel free to log them.
+A universal Javascript utility that helps you to display currency properly. This is a <b>fork</b> of <a href="https://github.com/smirzaei/currency-formatter">Smirzaei's</a> currency-formatter. The original library was created for node js and module bundlers only. This library is exported as UMD, which means you can use it in anyway you like. Since the original library was created a long time ago, this may still have few issues. Please feel free to log them.
 
 
 Install

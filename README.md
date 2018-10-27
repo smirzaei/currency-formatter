@@ -30,7 +30,7 @@ currencyFormatter.format(1000000, { code: 'EUR' });
 
 Or by specifying the locale
 ```js
-var currencyFormatter = require('currency-formatter');
+import currencyFormatter from 'uniformat';
 
 currencyFormatter.format(1000000, { locale: 'en-US' });
 // => '$1,000,000.00'

@@ -4,7 +4,7 @@ import localeCurrency from 'locale-currency';
 import curr from './json/currencies';
 import localeFormats from './json/localeFormats';
 
-var defaultCurrency = {
+let defaultCurrency = {
   symbol: '',
   thousandsSeparator: ',',
   decimalSeparator: '.',
@@ -13,9 +13,9 @@ var defaultCurrency = {
   decimalDigits: 2
 };
 
-var defaultLocaleFormat = {};
+let defaultLocaleFormat = {};
 
-var formatMapping = [
+let formatMapping = [
   {
     symbolOnLeft: true,
     spaceBetweenAmountAndSymbol: false,
@@ -55,19 +55,19 @@ var formatMapping = [
 ];
 
 function format(value, options) {
-  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
-  var localeMatch = /^([a-z]+)([_-]([a-z]+))?$/i.exec(options.locale) || [];
-  var language = localeMatch[1];
-  var region = localeMatch[3];
-  var localeFormat = assign({}, defaultLocaleFormat,
+  let code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
+  let localeMatch = /^([a-z]+)([_-]([a-z]+))?$/i.exec(options.locale) || [];
+  let language = localeMatch[1];
+  let region = localeMatch[3];
+  let localeFormat = assign({}, defaultLocaleFormat,
     localeFormats[language] || {},
     localeFormats[language + '-' + region] || {});
-  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat);
+  let currency = assign({}, defaultCurrency, findCurrency(code), localeFormat);
 
-  var symbolOnLeft = currency.symbolOnLeft;
-  var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
+  let symbolOnLeft = currency.symbolOnLeft;
+  let spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol;
 
-  var format = formatMapping.filter(function (f) {
+  let format = formatMapping.filter(function (f) {
     return f.symbolOnLeft == symbolOnLeft && f.spaceBetweenAmountAndSymbol == spaceBetweenAmountAndSymbol
   })[0].format;
 
@@ -103,14 +103,14 @@ function isUndefined(val) {
 }
 
 function unformat(value, options) {
-  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
-  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat;
-  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat);
-  var decimal = isUndefined(options.decimal) ? currency.decimalSeparator : options.decimal;
+  let code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
+  let localeFormat = localeFormats[options.locale] || defaultLocaleFormat;
+  let currency = assign({}, defaultCurrency, findCurrency(code), localeFormat);
+  let decimal = isUndefined(options.decimal) ? currency.decimalSeparator : options.decimal;
   return accounting.unformat(value, decimal);
 }
 
-var currencies = function () {
+let currencies = function () {
   return Object.keys(curr).map(function (key) {
     return curr[key];
   });

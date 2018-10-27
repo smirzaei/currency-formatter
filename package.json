@@ -1,28 +1,30 @@
 {
-  "name": "currency-formatter",
-  "version": "1.5.1",
-  "description": "A simple Javascript utility that helps you to display currency properly",
-  "main": "dist/js/currencyFormatter.js",
+  "name": "uniformat",
+  "version": "1.0.0",
+  "description": "A universal Javascript utility that helps you to display currency properly",
+  "main": "dist/js/uniformat.js",
   "module": "index.js",
   "scripts": {
-    "test": "NODE_ENV=test mocha ./test.js --harmony",
     "build": "rollup -c"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smirzaei/currency-formatter.git"
+    "url": "git+https://github.com/scssyworks/currency-formatter.git"
   },
   "keywords": [
     "format",
     "currency",
-    "money"
+    "money",
+    "formatter",
+    "universal-formatter",
+    "uniformat"
   ],
-  "author": "Soroush Mirzaei <soroush.mirzaei@gmail.com>",
+  "author": "Sachin Singh <contactsachinsingh@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/smirzaei/currency-formatter/issues"
+    "url": "https://github.com/scssyworks/currency-formatter/issues"
   },
-  "homepage": "https://github.com/smirzaei/currency-formatter#readme",
+  "homepage": "https://github.com/scssyworks/currency-formatter#readme",
   "devDependencies": {
     "@babel/core": "^7.1.0",
     "babel-preset-env": "^7.0.0-beta.3",

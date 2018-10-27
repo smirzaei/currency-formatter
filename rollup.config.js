@@ -37,7 +37,7 @@ export default [
     {
         input: "index.js",
         output: {
-            file: "dist/js/currencyFormatter.js",
+            file: "dist/js/uniformat.js",
             format: "umd",
             name: "currencyFormatter",
             exports: "named"
@@ -58,7 +58,7 @@ export default [
     {
         input: "index.js",
         output: {
-            file: "dist/js/currencyFormatter.min.js",
+            file: "dist/js/uniformat.min.js",
             format: "umd",
             name: "currencyFormatter",
             exports: "named"

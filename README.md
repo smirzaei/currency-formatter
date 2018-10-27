@@ -1,51 +1,13 @@
-# Currency Formatter
+# UniFormat
 
-[![Build Status](https://travis-ci.org/smirzaei/currency-formatter.svg)](https://travis-ci.org/smirzaei/currency-formatter)
-
-A simple Javascript utility that helps you to display currency properly
-
-STOP! You probably don't need this library
-=
-
-#### TL;DR: This library was created a long time ago. You should use [Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) instead.
-
-Please don't add another dependency which you don't need. All modern browsers (and node.js) have this functionality built-in and do a much better job at formatting currencies. e.g. [#57](https://github.com/smirzaei/currency-formatter/issues/57)
-
-* Browser support: https://caniuse.com/#search=intl
-* Polyfill: https://github.com/andyearnshaw/Intl.js
-* ECMA402 reference: https://tc39.github.io/ecma402/
-
-Example:
-```JS
-new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(100000000)
-// => "$100,000,000.00"
-
-new Intl.NumberFormat('en-US', { style: 'currency', currency: 'EUR' }).format(100000000)
-// => "€100,000,000.00"
-
-new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(100000000)
-// => "100.000.000,00 $"
-
-new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(100000000)
-// => "100.000.000,00 €"
-
-new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(100000000)
-// => "100 000 000,00 €"
-```
-
-With that being said use this library if you need:
-
-* Support old browsers.
-* Consistent formatting across all browsers.
-* You don't like the Intl APIs
-* ???
+A universal Javascript utility that helps you to display currency properly. It is based on <a href="https://github.com/smirzaei/currency-formatter">Smirzaei's</a> currency-formatter. The original library was created for node js and module bundlers only. This library is exported as UMD, which means you can use it in anyway you like. Since the original library was created a long time ago, this may still have few issues. Please feel free to log them.
 
 
 Install
 =
 
 ```bash
-npm install currency-formatter --save
+npm install uniformat --save
 ```
 
 Basic Usage
@@ -54,7 +16,7 @@ Basic Usage
 By specifying the currency code
 
 ```js
-var currencyFormatter = require('currency-formatter');
+import currencyFormatter from 'uniformat';
 
 currencyFormatter.format(1000000, { code: 'USD' });
 // => '$1,000,000.00'
@@ -88,8 +50,8 @@ currencyFormatter.format(1000000, { locale: 'nl-NL' });
 
 You can also get the currency information.
 
-```JAVASCRIPT
-var currencyFormatter = require('currency-formatter');
+```js
+import currencyFormatter from 'uniformat';
 
 currencyFormatter.findCurrency('USD');
 // returns:
@@ -140,7 +102,7 @@ Advanced Usage
 Currency Formatter uses [accounting](https://github.com/openexchangerates/accounting.js) library under the hood, and you can use its options to override the default behavior.
 
 ```JAVASCRIPT
-var currencyFormatter = require('currency-formatter');
+import currencyFormatter from 'uniformat';
 currencyFormatter.format(1000000, {
   symbol: '@',
   decimal: '*',
@@ -163,34 +125,8 @@ currencyFormatter.format(-10, {
 // => ($10)
 ```
 
-You could also get a list of all the currencies here using one of the following:
+You could also get a list of all the currencies:
 
 ```js
-var currencies = require('currency-formatter/currencies');
-// OR
-var currencyFormatter = require('currency-formatter');
-var currencies = currencyFormatter.currencies;
+const currencies = currencyFormatter.currencies();
 ```
-
-Or the currencies in hashmap shape:
-
-```js
-var currencies = require('currency-formatter/currencies.json');
-// Result:
-// {
-//  "USD": {
-//    "code": "USD",
-//    "symbol": "$",
-//    "thousandsSeparator": ",",
-//    "decimalSeparator": ".",
-//    "symbolOnLeft": true,
-//    "spaceBetweenAmountAndSymbol": false,
-//    "decimalDigits": 2
-//  },
-//  ...more currencies
-// }
-```
-
-License
-=
-[MIT](https://github.com/smirzaei/currency-formatter/blob/master/LICENSE)

@@ -1,6 +1,6 @@
 {
   "name": "uniformat",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A universal Javascript utility that helps you to display currency properly",
   "main": "dist/js/uniformat.js",
   "module": "index.js",

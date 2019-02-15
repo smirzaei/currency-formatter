@@ -35,6 +35,7 @@ new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(10
 
 With that being said use this library if you need:
 
+* Your version of node.js doesn't come with the `full-icu`. See: [#72](https://github.com/smirzaei/currency-formatter/issues/72) and [#19214](https://github.com/nodejs/node/issues/19214)
 * Support old browsers.
 * Consistent formatting across all browsers.
 * You don't like the Intl APIs

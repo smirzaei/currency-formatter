@@ -1243,11 +1243,11 @@
   },
   "TRY": {
     "code": "TRY",
-    "symbol": "TL",
+    "symbol": "₺",
     "thousandsSeparator": ".",
     "decimalSeparator": ",",
-    "symbolOnLeft": false,
-    "spaceBetweenAmountAndSymbol": true,
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
     "decimalDigits": 2
   },
   "TTD": {

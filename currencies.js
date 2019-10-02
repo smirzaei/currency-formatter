@@ -261,6 +261,15 @@ module.exports = [
     decimalDigits: 2
   },
   {
+    code: 'CLF',
+    symbol: 'UF',
+    thousandsSeparator: '.',
+    decimalSeparator: ',',
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: true,
+    decimalDigits: 2,
+  },
+  {
     code: 'CLP',
     symbol: '$',
     thousandsSeparator: '.',

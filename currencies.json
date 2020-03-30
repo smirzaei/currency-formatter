@@ -114,7 +114,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "BGN": {
     "code": "BGN",
@@ -141,7 +141,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "BMD": {
     "code": "BMD",
@@ -159,7 +159,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "BOB": {
     "code": "BOB",
@@ -204,7 +204,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 1
+    "decimalDigits": 2
   },
   "BWP": {
     "code": "BWP",
@@ -339,7 +339,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "DKK": {
     "code": "DKK",
@@ -537,7 +537,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "IDR": {
     "code": "IDR",
@@ -573,7 +573,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 2
+    "decimalDigits": 3
   },
   "IRR": {
     "code": "IRR",
@@ -591,7 +591,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "JMD": {
     "code": "JMD",
@@ -645,7 +645,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "KMF": {
     "code": "KMF",
@@ -654,7 +654,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "KPW": {
     "code": "KPW",
@@ -663,7 +663,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "KRW": {
     "code": "KRW",
@@ -708,7 +708,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "LBP": {
     "code": "LBP",
@@ -726,7 +726,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "LRD": {
     "code": "LRD",
@@ -852,7 +852,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 1
+    "decimalDigits": 2
   },
   "MWK": {
     "code": "MWK",
@@ -888,7 +888,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "NAD": {
     "code": "NAD",
@@ -1014,7 +1014,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "QAR": {
     "code": "QAR",
@@ -1059,7 +1059,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "SAR": {
     "code": "SAR",
@@ -1221,7 +1221,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "TND": {
     "code": "TND",
@@ -1365,7 +1365,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 0
+    "decimalDigits": 2
   },
   "WST": {
     "code": "WST",
@@ -1383,7 +1383,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "XCD": {
     "code": "XCD",
@@ -1410,7 +1410,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "XPF": {
     "code": "XPF",
@@ -1419,7 +1419,7 @@
     "decimalSeparator": ".",
     "symbolOnLeft": false,
     "spaceBetweenAmountAndSymbol": false,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "YER": {
     "code": "YER",

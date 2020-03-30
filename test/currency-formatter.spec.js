@@ -1,6 +1,6 @@
-var chai = require('chai')
-var assert = chai.assert
-var currencyFormatter = require('./index')
+const { assert } = require('chai');
+
+const currencyFormatter = require('../lib');
 
 describe('format', () => {
     context('Default Options', () => {
@@ -315,7 +315,7 @@ describe('format', () => {
 
 describe('currencies', () => {
     it('should be exposed as public via require()', () => {
-        assert(Array.isArray(require('./currencies')))
+        assert(Array.isArray(require('../lib/currencies')))
     })
 
     it('should be exposed as public via .currencies', () => {

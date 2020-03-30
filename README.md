@@ -1,46 +1,6 @@
 # Currency Formatter
 
-[![Build Status](https://travis-ci.org/smirzaei/currency-formatter.svg)](https://travis-ci.org/smirzaei/currency-formatter)
-
 A simple Javascript utility that helps you to display currency properly
-
-STOP! You probably don't need this library
-=
-
-#### TL;DR: This library was created a long time ago. You should use [Internationalization API](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/NumberFormat) instead.
-
-Please don't add another dependency which you don't need. All modern browsers (and node.js) have this functionality built-in and do a much better job at formatting currencies. e.g. [#57](https://github.com/smirzaei/currency-formatter/issues/57)
-
-* Browser support: https://caniuse.com/#search=intl
-* Polyfill: https://github.com/andyearnshaw/Intl.js
-* ECMA402 reference: https://tc39.github.io/ecma402/
-
-Example:
-```JS
-new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(100000000)
-// => "$100,000,000.00"
-
-new Intl.NumberFormat('en-US', { style: 'currency', currency: 'EUR' }).format(100000000)
-// => "€100,000,000.00"
-
-new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'USD' }).format(100000000)
-// => "100.000.000,00 $"
-
-new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' }).format(100000000)
-// => "100.000.000,00 €"
-
-new Intl.NumberFormat('fr-FR', { style: 'currency', currency: 'EUR' }).format(100000000)
-// => "100 000 000,00 €"
-```
-
-With that being said use this library if you need:
-
-* Your version of node.js doesn't come with the `full-icu`. See: [#72](https://github.com/smirzaei/currency-formatter/issues/72) and [#19214](https://github.com/nodejs/node/issues/19214)
-* Support old browsers.
-* Consistent formatting across all browsers.
-* You don't like the Intl APIs
-* ???
-
 
 Install
 =

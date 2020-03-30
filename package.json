@@ -4,7 +4,7 @@
   "description": "Epoch fork - A simple Javascript utility that helps you to display currency properly",
   "homepage": "https://github.com/AgaDevs/currency-formatter#readme",
   "license": "MIT",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "version": "2.0.0",
   "keywords": [
     "currency",
@@ -17,7 +17,8 @@
   "dependencies": {
     "accounting": "0.4.1",
     "locale-currency": "0.0.2",
-    "object-assign": "4.1.1"
+    "object-assign": "4.1.1",
+    "require-directory": "^2.1.1"
   },
   "devDependencies": {
     "chai": "4.2.0",
@@ -42,6 +43,6 @@
   },
   "scripts": {
     "lint": "eslint .",
-    "test": "NODE_ENV=test mocha ./test.js"
+    "test": "NODE_ENV=test mocha ./test/**/*.spec.js"
   }
 }

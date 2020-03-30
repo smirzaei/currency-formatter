@@ -1,124 +1,107 @@
-var accounting = require('accounting')
-var assign = require('object-assign')
-var localeCurrency = require('locale-currency')
-var currencies = require('./currencies.json')
-var localeFormats = require('./localeFormats.json')
+const accounting = require('accounting');
+const assign = require('object-assign');
+const localeCurrency = require('locale-currency');
 
-var defaultCurrency = {
-  symbol: '',
-  thousandsSeparator: ',',
-  decimalSeparator: '.',
-  symbolOnLeft: true,
-  spaceBetweenAmountAndSymbol: false,
-  decimalDigits: 2
-}
+const currencies = require('./currencies.json');
+const localeFormats = require('./localeFormats.json');
 
-var defaultLocaleFormat = {}
+const defaultCurrency = {
+    symbol: '',
+    thousandsSeparator: ',',
+    decimalSeparator: '.',
+    symbolOnLeft: true,
+    spaceBetweenAmountAndSymbol: false,
+    decimalDigits: 2
+};
+const defaultLocaleFormat = {};
 
-var formatMapping = [
-  {
+const formatMapping = [{
     symbolOnLeft: true,
     spaceBetweenAmountAndSymbol: false,
     format: {
-      pos: '%s%v',
-      neg: '-%s%v',
-      zero: '%s%v'
+        pos: '%s%v',
+        neg: '-%s%v',
+        zero: '%s%v'
     }
-  },
-  {
+}, {
     symbolOnLeft: true,
     spaceBetweenAmountAndSymbol: true,
     format: {
-      pos: '%s %v',
-      neg: '-%s %v',
-      zero: '%s %v'
+        pos: '%s %v',
+        neg: '-%s %v',
+        zero: '%s %v'
     }
-  },
-  {
+}, {
     symbolOnLeft: false,
     spaceBetweenAmountAndSymbol: false,
     format: {
-      pos: '%v%s',
-      neg: '-%v%s',
-      zero: '%v%s'
+        pos: '%v%s',
+        neg: '-%v%s',
+        zero: '%v%s'
     }
-  },
-  {
+}, {
     symbolOnLeft: false,
     spaceBetweenAmountAndSymbol: true,
     format: {
-      pos: '%v %s',
-      neg: '-%v %s',
-      zero: '%v %s'
+        pos: '%v %s',
+        neg: '-%v %s',
+        zero: '%v %s'
     }
-  }
-]
-
-function format(value, options) {
-  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
-  var localeMatch = /^([a-z]+)([_-]([a-z]+))?$/i.exec(options.locale) || []
-  var language = localeMatch[1]
-  var region = localeMatch[3]
-  var localeFormat = assign({}, defaultLocaleFormat,
-                            localeFormats[language] || {},
-                            localeFormats[language + '-' + region] || {})
-  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
-  
-  var symbolOnLeft = currency.symbolOnLeft
-  var spaceBetweenAmountAndSymbol = currency.spaceBetweenAmountAndSymbol
-
-  var format = formatMapping.filter(function(f) {
-    return f.symbolOnLeft == symbolOnLeft && f.spaceBetweenAmountAndSymbol == spaceBetweenAmountAndSymbol
-  })[0].format
-
-  return accounting.formatMoney(value, {
-    symbol: isUndefined(options.symbol)
-              ? currency.symbol
-              : options.symbol,
-
-    decimal: isUndefined(options.decimal)
-              ? currency.decimalSeparator
-              : options.decimal,
-
-    thousand: isUndefined(options.thousand)
-              ? currency.thousandsSeparator
-              : options.thousand,
-
-    precision: typeof options.precision === 'number'
-              ? options.precision
-              : currency.decimalDigits,
-
-    format: ['string', 'object'].indexOf(typeof options.format) > -1
-              ? options.format
-              : format
-  })
-}
-
-function findCurrency (currencyCode) {
-  return currencies[currencyCode]
-}
+}];
 
 function isUndefined (val) {
-  return typeof val === 'undefined'
+    return typeof val === 'undefined';
 }
 
-function unformat(value, options) {
-  var code = options.code || (options.locale && localeCurrency.getCurrency(options.locale))
-  var localeFormat = localeFormats[options.locale] || defaultLocaleFormat
-  var currency = assign({}, defaultCurrency, findCurrency(code), localeFormat)
-  var decimal = isUndefined(options.decimal) ? currency.decimalSeparator : options.decimal
-  return accounting.unformat(value, decimal)
-}
+const format = function format (value, options) {
+    const code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
+    const localeMatch = /^([a-z]+)([_-]([a-z]+))?$/i.exec(options.locale) || [];
+    const language = localeMatch[1];
+    const region = localeMatch[3];
+
+    const localeFormat = assign({}, defaultLocaleFormat,
+        localeFormats[language] || {},
+        localeFormats[`${language}-${region}`] || {});
+
+    const {
+        decimalDigits,
+        decimalSeparator,
+        spaceBetweenAmountAndSymbol,
+        symbol,
+        symbolOnLeft,
+        thousandsSeparator
+    } = assign({}, defaultCurrency, findCurrency(code), localeFormat);
+
+    var [{ format }] = formatMapping.filter((f) => (f.symbolOnLeft === symbolOnLeft && f.spaceBetweenAmountAndSymbol === spaceBetweenAmountAndSymbol));
+
+    return accounting.formatMoney(value, {
+        decimal: isUndefined(options.decimal) ? decimalSeparator : options.decimal,
+        format: ['string', 'object'].indexOf(typeof options.format) > -1 ? options.format : format,
+        precision: typeof options.precision === 'number' ? options.precision : decimalDigits,
+        symbol: isUndefined(options.symbol) ? symbol : options.symbol,
+        thousand: isUndefined(options.thousand) ? thousandsSeparator : options.thousand
+    });
+};
+
+const findCurrency = (currencyCode) => currencies[currencyCode];
+
+const unformat = (value, options) => {
+    const code = options.code || (options.locale && localeCurrency.getCurrency(options.locale));
+    const localeFormat = localeFormats[options.locale] || defaultLocaleFormat;
+
+    const { decimalSeparator } = assign({}, defaultCurrency, findCurrency(code), localeFormat);
+    const decimal = isUndefined(options.decimal) ? decimalSeparator : options.decimal;
+
+    return accounting.unformat(value, decimal);
+};
 
 module.exports = {
-  defaultCurrency: defaultCurrency,
-  get currencies() {
-    // In favor of backwards compatibility, the currencies map is converted to an array here
-    return Object.keys(currencies).map(function(key) {
-      return currencies[key]
-    })
-  },
-  findCurrency: findCurrency,
-  format: format,
-  unformat: unformat
-}
+    defaultCurrency,
+    get currencies () {
+        // In favor of backwards compatibility, the currencies map is converted to an array here
+        return Object.keys(currencies).map((key) => currencies[key]);
+    },
+    findCurrency,
+    format,
+    unformat
+};

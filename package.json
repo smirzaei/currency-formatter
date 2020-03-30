@@ -1,33 +1,46 @@
 {
-  "name": "currency-formatter",
-  "version": "1.5.5",
-  "description": "A simple Javascript utility that helps you to display currency properly",
+  "name": "@epoch/currency-formatter",
+  "author": "Soroush Mirzaei <soroush.mirzaei@gmail.com>",
+  "description": "Epoch fork - A simple Javascript utility that helps you to display currency properly",
+  "homepage": "https://github.com/AgaDevs/currency-formatter#readme",
+  "license": "MIT",
   "main": "index.js",
-  "scripts": {
-    "test": "NODE_ENV=test mocha ./test.js --harmony"
+  "version": "2.0.0",
+  "keywords": [
+    "currency",
+    "format",
+    "money"
+  ],
+  "bugs": {
+    "url": "https://github.com/AgaDevs/currency-formatter/issues"
+  },
+  "dependencies": {
+    "accounting": "0.4.1",
+    "locale-currency": "0.0.2",
+    "object-assign": "4.1.1"
+  },
+  "devDependencies": {
+    "chai": "4.2.0",
+    "eslint": "6.8.0",
+    "eslint-config-standard": "14.1.1",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-node": "11.1.0",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "husky": "4.2.3",
+    "mocha": "7.1.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/smirzaei/currency-formatter.git"
+    "url": "git+https://github.com/AgaDevs/currency-formatter.git"
   },
-  "keywords": [
-    "format",
-    "currency",
-    "money"
-  ],
-  "author": "Soroush Mirzaei <soroush.mirzaei@gmail.com>",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/smirzaei/currency-formatter/issues"
-  },
-  "homepage": "https://github.com/smirzaei/currency-formatter#readme",
-  "devDependencies": {
-    "chai": "^4.1.2",
-    "mocha": "^5.2.0"
-  },
-  "dependencies": {
-    "accounting": "^0.4.1",
-    "locale-currency": "0.0.2",
-    "object-assign": "^4.1.1"
+  "scripts": {
+    "lint": "eslint .",
+    "test": "NODE_ENV=test mocha ./test.js"
   }
 }

@@ -1,4 +1,4 @@
-var formatter = require('./index')
+const formatter = require('./index')
 
 /**
  * This module exists purely for backwards compatibility reasons. Historically, the currencies

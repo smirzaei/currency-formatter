@@ -1027,7 +1027,7 @@
   },
   "RON": {
     "code": "RON",
-    "symbol": "lei",
+    "symbol": "L",
     "thousandsSeparator": ".",
     "decimalSeparator": ",",
     "symbolOnLeft": false,

@@ -224,6 +224,15 @@
     "spaceBetweenAmountAndSymbol": true,
     "decimalDigits": 2
   },
+  "BYN": {
+    "code": "BYN",
+    "symbol": "р.",
+    "thousandsSeparator": " ",
+    "decimalSeparator": ",",
+    "symbolOnLeft": false,
+    "spaceBetweenAmountAndSymbol": true,
+    "decimalDigits": 2
+  },
   "BZD": {
     "code": "BZD",
     "symbol": "BZ$",

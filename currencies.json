@@ -276,7 +276,7 @@
     "decimalSeparator": ",",
     "symbolOnLeft": true,
     "spaceBetweenAmountAndSymbol": true,
-    "decimalDigits": 2
+    "decimalDigits": 0
   },
   "CNY": {
     "code": "CNY",

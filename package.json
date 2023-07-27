@@ -1,6 +1,6 @@
 {
   "name": "currency-formatter",
-  "version": "1.0.4",
+  "version": "1.5.9",
   "description": "A simple Javascript utility that helps you to display currency properly",
   "main": "index.js",
   "scripts": {
@@ -22,11 +22,12 @@
   },
   "homepage": "https://github.com/smirzaei/currency-formatter#readme",
   "devDependencies": {
-    "chai": "^3.3.0",
-    "mocha": "^2.3.3"
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0"
   },
   "dependencies": {
     "accounting": "^0.4.1",
-    "lodash.find": "^4.0.0"
+    "locale-currency": "0.0.2",
+    "object-assign": "^4.1.1"
   }
 }

@@ -1,0 +1,58 @@
+{
+  "de": {
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "symbolOnLeft": false,
+    "spaceBetweenAmountAndSymbol": true,
+    "decimalDigits": 2
+  },
+  "el": {
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
+  },
+  "en-US": {
+    "thousandsSeparator": ",",
+    "decimalSeparator": ".",
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "decimalDigits": 2
+  },
+  "en-IE": {
+    "symbolOnLeft": true,
+    "thousandsSeparator": ",",
+    "decimalSeparator": ".",
+    "spaceBetweenAmountAndSymbol": true,
+    "decimalDigits": 2
+  },
+  "zh-CN": {
+    "thousandsSeparator": ",",
+    "decimalSeparator": ".",
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "decimalDigits": 2
+  },
+  "es": {
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "symbolOnLeft": false,
+    "spaceBetweenAmountAndSymbol": true,
+    "decimalDigits": 2
+  },
+  "it": {
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
+  },
+  "nl": {
+    "symbolOnLeft": true,
+    "spaceBetweenAmountAndSymbol": false,
+    "thousandsSeparator": ".",
+    "decimalSeparator": ",",
+    "decimalDigits": 2
+  }
+}

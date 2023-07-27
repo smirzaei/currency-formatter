@@ -5,6 +5,7 @@
 logs
 *.log
 npm-debug.log*
+package-lock.json
 
 # Runtime data
 pids
@@ -88,3 +89,8 @@ $RECYCLE.BIN/
 
 # Linux trash folder which might appear on any partition or disk
 .Trash-*
+
+### IDE's ###
+
+# IntelliJ Idea
+.idea

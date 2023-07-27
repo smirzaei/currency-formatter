@@ -285,7 +285,7 @@ module.exports = [
     decimalSeparator: '.',
     symbolOnLeft: true,
     spaceBetweenAmountAndSymbol: false,
-    decimalDigits: 2
+    decimalDigits: 1
   },
   {
     code: 'COP',
